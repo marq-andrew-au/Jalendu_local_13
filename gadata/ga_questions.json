@@ -1,0 +1,1442 @@
+[
+  {
+    "question": "Should books that realistically portray diverse types of romantic relationships, family structures and gender identities be made available to young children?",
+    "spectra": [
+      "homophobic - homofavorable",
+      "transphobic - transfavorable",
+      "bi-erasing - bi-affirming",
+      "right-leaning - left-leaning",
+      "conservative - progressive"
+    ],
+    "answers": [
+      {
+        "answer": "No.",
+        "reply": "Wrong",
+        "score": -5,
+        "spectra": [
+          "authoritarian - democratic"
+        ]
+      },
+      {
+        "answer": "Yes, but only if parents/guardians approve.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "Yes, even if parents/guardians disapprove.",
+        "reply": "Correct",
+        "score": 5,
+        "spectra": [
+          "authoritarian - democratic"
+        ]
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 0,
+    "status": "active"
+  },
+  {
+    "question": "How many genders are there in humans?",
+    "spectra": [
+      "homophobic - homofavorable",
+      "transphobic - transfavorable",
+      "right-leaning - left-leaning",
+      "conservative - progressive"
+    ],
+    "answers": [
+      {
+        "answer": "2",
+        "reply": "Wrong",
+        "score": -5,
+        "spectra": [
+          "transphobic - transfavorable"
+        ]
+      },
+      {
+        "answer": "42",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "Gender is not a numerable concept in humans.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "index": 1,
+    "author": "679465390841135126",
+    "status": "active"
+  },
+  {
+    "question": "If you had to leave a young child in the care of a stranger, statistically which one is safest?",
+    "spectra": [
+      "homophobic - homofavorable",
+      "right-leaning - left-leaning",
+      "conservative - progressive"
+    ],
+    "answers": [
+      {
+        "answer": "A drag queen.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "A conservative or right wing politician.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "A member of the MAGA cult.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "A member of a religious clergy.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "I prefer not to answer.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 2,
+    "status": "active"
+  },
+  {
+    "question": "Would you describe yourself as 'woke'?",
+    "spectra": [
+      "racist - unprejudiced",
+      "homophobic - homofavorable",
+      "transphobic - transfavorable",
+      "right-leaning - left-leaning",
+      "conservative - progressive"
+    ],
+    "answers": [
+      {
+        "answer": "Yes",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "No.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "No. Being active and awake to issues such as systemic racism, homophobia, transphobia, the environment, global heating, inequality, injustice etc. is a form of mental illness.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "I prefer not to answer.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 3,
+    "status": "active"
+  },
+  {
+    "question": "Who is George Soros?",
+    "spectra": [
+      "right-leaning - left-leaning",
+      "capitalist - socialist"
+    ],
+    "answers": [
+      {
+        "answer": "An important icon of left-wing politics and economics.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "I've heard of him but mainly because right-wing conspiracy theorists circle jerk over him.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "No idea.",
+        "reply": "Good enough",
+        "score": 5
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 4,
+    "status": "active"
+  },
+  {
+    "question": "Can culture (language, religion, artistic and personal expression, patterns of behaviour etc.) learned within social groups be the exclusive property of a racial group?",
+    "spectra": [
+      "racist - unprejudiced"
+    ],
+    "answers": [
+      {
+        "answer": "No. To confuse culture and behaviour with race is the heart of racism.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "Yes. Cultural appropriation is racist.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "Cultural practices and expressions should not be misused, disrespected or in some cases used without initiation or formal permission by people outside that culture or tradition however if the permission to use or not use is based on race, that is racist.",
+        "reply": "correct",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 5,
+    "status": "active"
+  },
+  {
+    "question": "Would the world be a better place without international borders?",
+    "spectra": [
+      "right-leaning - left-leaning",
+      "nationalist - internationalist"
+    ],
+    "answers": [
+      {
+        "answer": "No, people fought and died for our borders.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "Yes, people fought and died for our borders.",
+        "reply": "Of course!",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 6,
+    "status": "active"
+  },
+  {
+    "question": "Are pedophiles (people sexually attracted to young children) included as a sexuality under the LGBTQIA+ umbrella?",
+    "spectra": [
+      "homophobic - homofavorable"
+    ],
+    "answers": [
+      {
+        "answer": "No",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "Yes",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "No, but they should be",
+        "reply": "No way",
+        "score": -5
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 7,
+    "status": "active"
+  },
+  {
+    "question": "Protests by TERFs (Trans-exclusionary Radical Feminists) against trans-rights are often accompanied by various far-right groups including neo-Nazis, anti-vaxxers, white supremacists etc.. How do you explain that?",
+    "spectra": [
+      "transphobic - transfavorable",
+      "right-leaning - left-leaning",
+      "fascist - anti-fascist"
+    ],
+    "answers": [
+      {
+        "answer": "They are all the product of the same 'post-truth' social media echo-chambers where facts, honest experience and the consensus of scientific opinion are ignored in favour of fact-less ideology and conspiracy theory.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "Anti-trans rights protests by TERFs are hijacked or infiltrated by other groups.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "Pro-trans-rights groups pose as neo-nazis and attend TERF protests to discredit them.",
+        "reply": "Incorrect",
+        "score": -5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 8,
+    "status": "active"
+  },
+  {
+    "question": "It is often said that everyone has a right to their own opinions. Is it correct?",
+    "spectra": [
+      "libertarian - communalist",
+      "post-truth - pro-truth"
+    ],
+    "answers": [
+      {
+        "answer": "No. No one has a right to hold and express opinions proven wrong by facts.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "Yes, freedom of thought and speech are paramount.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "No one has a right to an opinion about how another person experiences their life. For example opinions that gay people chose to be gay or that trans-women are not real women.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 9,
+    "status": "active"
+  },
+  {
+    "question": "What was the most significant Antifa (antifascist) event of the 20th Century?",
+    "spectra": [
+      "fascist - anti-fascist"
+    ],
+    "answers": [
+      {
+        "answer": "The Storming of the Bastille.",
+        "reply": "That was in the 18th Century",
+        "score": -5
+      },
+      {
+        "answer": "World War 2",
+        "reply": "Yes",
+        "score": 5
+      },
+      {
+        "answer": "The Russian Revolution",
+        "reply": "Maybe",
+        "score": 5,
+        "spectra": [
+          "capitalist - socialist",
+          "right-leaning - left-leaning"
+        ]
+      },
+      {
+        "answer": "The Stonewall Riots",
+        "reply": "Really?",
+        "score": 3,
+        "spectra": [
+          "homophobic - homofavorable"
+        ]
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 10,
+    "status": "active"
+  },
+  {
+    "question": "Who are the Aryan Race?",
+    "spectra": [
+      "fascist - anti-fascist",
+      "racist - unprejudiced"
+    ],
+    "answers": [
+      {
+        "answer": "Aryan Race never existed. People described as Indo-Aryans aka Indo-Iranians are multi-racial, multi-cultural peoples with a common linguistic heritage.",
+        "reply": "Yes. Nazis are stupid and wrong.",
+        "score": 5
+      },
+      {
+        "answer": "White people with superior culture and intelligence from Northern Europe and Britain who originally migrated from Central Asia.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      },
+      {
+        "answer": "I prefer not to answer.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 11,
+    "status": "active"
+  },
+  {
+    "question": "Should trans-youth be prescribed puberty blockers until they are old enough to make decisions about their own health care?",
+    "spectra": [
+      "transphobic - transfavorable"
+    ],
+    "answers": [
+      {
+        "answer": "No. They have been brainwashed. Puberty will cure them.",
+        "reply": "no, YOU have been brainwashed.",
+        "score": -5
+      },
+      {
+        "answer": "It is a question for them and their doctors.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "It is a question for the voters in their jurisdiction.",
+        "reply": "No, trans health is a medical issue, NOT a political issue.",
+        "score": -5
+      },
+      {
+        "answer": "I don't except that trans-youth exist.",
+        "reply": "Wrong",
+        "score": -5,
+        "spectra": [
+          "post-truth - pro-truth"
+        ]
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 12,
+    "status": "active"
+  },
+  {
+    "question": "Should religious organisations and businesses be exempt for laws that protect lgbtqia+ people from discrimination?",
+    "spectra": [
+      "homophobic - homofavorable",
+      "transphobic - transfavorable",
+      "libertarian - communalist"
+    ],
+    "answers": [
+      {
+        "answer": "Yes. Freedom of Religion is a fundamental right.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "No. That is as stupid as giving white supremacists an exemption from anti-racial discrimination laws because of their beliefs.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 13,
+    "status": "active"
+  },
+  {
+    "question": "Private homosexuality was effectively legalised in all of the Middle-East under the Ottoman Empire (including modern Saudi Arabia) in 1858. In what year was private homosexuality made a crime again in Saudi Arabia?",
+    "answers": [
+      {
+        "answer": "1914.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "1980.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "2000.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "Private homosexuality has always been a crime in Islamic countries.",
+        "reply": "Wrong",
+        "score": -5
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 14
+  },
+  {
+    "question": "What is gender identity?",
+    "answers": [
+      {
+        "answer": "Your biological gender from birth.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "How you experience your gender internally and think about yourself.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "How other people perceive your gender.",
+        "reply": "Wrong",
+        "score": -5
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 15
+  },
+  {
+    "question": "Conservative religious politicians often say that same-sex marriage will lead to polygamy as an argument against it even though it is very well known that polygamy is mainly practiced by conservative religious groups like Muslims, Mormons, etc. How do you explain this?",
+    "answers": [
+      {
+        "answer": "Conservatives will say anything to defend their ideologies no matter how false or irrational.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "They oppose SSM because of homophobia or religious bigotry but they are not acceptable arguments anymore so they have to make something up no matter how obviously stupid.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "Conservatives are immune to cognitive dissonance. They are completely comfortable with contradictory, incompatible and irrational statements as long as they defend their ideologies from reality.",
+        "reply": "Correct",
+        "score": 5
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 16
+  },
+  {
+    "question": "Many heterosexual couples marry with no plan to have children. Many children (40%+) are born with biological parents not married to each other. Heterosexual marriage today has little to do with having children. Why then are the main arguments brought out against same-sex marriage about children?",
+    "answers": [
+      {
+        "answer": "The real reasons that some people oppose marriage equality are homophobia and religious bigotry but those reasons will not convince anyone else to oppose it so they have to make something else up no matter how nonsensical.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "The only reason people get married, even 80 year old couples, is to have children.",
+        "reply": "Ridiculous",
+        "score": -5
+      },
+      {
+        "answer": "Marriage is all about children. It's got nothing to do with a couple in love publicly committing to a shared life together. If a heterosexual couple are infertile or don't want to have children, then they shouldn't get married.",
+        "reply": "Wrong",
+        "score": -5
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 17
+  },
+  {
+    "question": "LGBTQIA+ community Discord servers are often invaded by people who send messages containing nazi symbols, 'kys','faggots', 'niggas' (inexplicably) and then just leave. How do you feel about that?",
+    "answers": [
+      {
+        "answer": "Psychologists have long known that people confident of their own sexuality and gender identity rarely have a problem with anyone else's.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "I would ask them if they tell their friends that they spend their time trolling LGBTQIA+ servers and if not, why not but I doubt they have any.",
+        "reply": "Probably",
+        "score": 5
+      },
+      {
+        "answer": "I admit to being a little aroused. We all know that the difference between a raging homophobe and a heavily lubed up sub-bottom naked on their hands and knees is two pints of beer.",
+        "reply": "True",
+        "score": 5
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 18
+  },
+  {
+    "question": "Do you believe that access to healthcare is a fundamental right that should not depend on a person's ability to pay?",
+    "answers": [
+      {
+        "answer": "Yes",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "No",
+        "reply": "Wrong",
+        "score": -5
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 19
+  },
+  {
+    "question": "Do you believe that higher education, university or college undergraduate degrees or diplomas should be free or heavily subsidised by governments?",
+    "answers": [
+      {
+        "answer": "Yes",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "No",
+        "reply": "Wrong",
+        "score": -5
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 20
+  },
+  {
+    "question": "Should undocumented migrants with no serious criminal record have a pathway to permanent residence or citizenship?",
+    "answers": [
+      {
+        "answer": "No",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "Yes",
+        "reply": "Correct",
+        "score": 5
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 21
+  },
+  {
+    "question": "Should abortion be legal?",
+    "answers": [
+      {
+        "answer": "No",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "Yes",
+        "reply": "Correct",
+        "score": 5
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 22
+  },
+  {
+    "question": "Should public access to assault weapons be banned?",
+    "answers": [
+      {
+        "answer": "No",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "Yes",
+        "reply": "Correct",
+        "score": 5
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 23
+  },
+  {
+    "question": "Is catastrophic man-made climate change due to carbon pollution really happening?",
+    "answers": [
+      {
+        "answer": "No",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "Yes",
+        "reply": "Correct",
+        "score": 5
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 24
+  },
+  {
+    "question": "Are vaccines effective and extremely low risk?",
+    "answers": [
+      {
+        "answer": "No",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "Yes",
+        "reply": "Correct",
+        "score": 5
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 25
+  },
+  {
+    "question": "In what country did the COVID-19 pandemic virus originate?",
+    "answers": [
+      {
+        "answer": "USA",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "China",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "Brazil",
+        "reply": "Wrong",
+        "score": -5
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 26
+  },
+  {
+    "question": "In a democracy, should the opinions of the majority override any claims to equal rights by minorities?",
+    "answers": [
+      {
+        "answer": "No. A democracy is not a dictatorship of the majority",
+        "reply": "Right",
+        "score": 5
+      },
+      {
+        "answer": "Yes. Majority rule is what democracy means.",
+        "reply": "Wrong",
+        "score": -5
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 27
+  },
+  {
+    "question": "Can a person be persuaded, 'recruited' or brainwashed into being gay or trans?",
+    "answers": [
+      {
+        "answer": "Yes.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "No.",
+        "reply": "Correct",
+        "score": 5
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 28
+  },
+  {
+    "question": "Should nations surrender more of their sovereignty and independence to international organisations such as the United Nations?",
+    "answers": [
+      {
+        "answer": "Yes.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "Only if veto powers are removed.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "No.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "I Don't know.",
+        "reply": "No points",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 29
+  },
+  {
+    "question": "In the mid-19th Century (first published 1946), American-English editions of the Bible (Paul/Timothy Epistles) replaced the word 'Sodomites' with 'Homosexuals', radically changing the meaning so that instead of it being a sin to do something, it becomes a sin just to exist. Why do you think this might have been done?",
+    "answers": [
+      {
+        "answer": "A more accurate translation making use of the word 'homosexuals' which only first appeared in print in 1868.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "The wording was changed to exonerate devout Christian heterosexual men returning to the USA from deployment to Europe in WW1 who had had occasional sex with other men.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "I Don't know.",
+        "reply": "No points",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 30
+  },
+  {
+    "question": "Is having sex with a person of the same gender as you the same as being gay?",
+    "answers": [
+      {
+        "answer": "No",
+        "reply": "Right",
+        "score": 5
+      },
+      {
+        "answer": "Yes",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "I Don't know.",
+        "reply": "No points",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "index": 31
+  },
+  {
+    "question": "Should a child at school be allowed to wear clothes or uniform that does not conform to their birth sex?",
+    "spectra": [
+      "transphobic - transfavorable"
+    ],
+    "answers": [
+      {
+        "answer": "Yes.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "No.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 32
+  },
+  {
+    "question": "In 2018, Donald Trump was recorded as saying: \"It's called the bowling ball test. Do you know what that is? That's where they take a bowling ball from 20 feet up in the air, and they drop it on the hood of the car. And if the hood dents, then the car doesn't qualify. Well, guess what, the roof dented a little bit, and they said, nope, this car doesn't qualify. It's horrible, the way we're treated. It's horrible.\"? What was he talking about?",
+    "spectra": [
+      "right-leaning - left-leaning",
+      "conservative - progressive",
+      "post-truth - pro-truth"
+    ],
+    "answers": [
+      {
+        "answer": "He was telling the truth.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "Probably the car safety standard test (in Japan and Europe) where a hemispherical object is dropped on cars to test absorption of the impact of a pedestrian's head but cars PASS the more they dent.",
+        "reply": "Trump is either stupid or a liar. Probably both.",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 33
+  },
+  {
+    "question": "Has Donald Trump been unfairly targeted by various arms of the US Justice System?",
+    "spectra": [
+      "right-leaning - left-leaning",
+      "conservative - progressive"
+    ],
+    "answers": [
+      {
+        "answer": "Yes but he has/had substantial crimes to answer for.",
+        "reply": "Correct.",
+        "score": 5,
+        "spectra": [
+          "post-truth - pro-truth"
+        ]
+      },
+      {
+        "answer": "No, he has been treated fairly. No one is above the law.",
+        "reply": "Debatable as to fairness but he deserves it.",
+        "score": 4
+      },
+      {
+        "answer": "Yes. It is/was a complete witch hunt.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 34
+  },
+  {
+    "question": "It seems like not a day goes by without a conservative religious clergyman or a conservative right wing politician being arrested or found guilty of child sexual abuse, possession of child pornography, online sexual grooming of minors or other sexual crimes, often after loudly and falsely accusing liberals or the LGBT+ community thir allies of the exact crimes they committed. What is going on?",
+    "spectra": [
+      "right-leaning - left-leaning",
+      "conservative - progressive",
+      "homophobic - homofavorable"
+    ],
+    "answers": [
+      {
+        "answer": "Their attraction to a career in conservative politics and religion which are seen to be less liberal when it comes to sex is primarily a means to deflect attention from and repress their own sexual deviancy.",
+        "reply": "Correct.",
+        "score": 5
+      },
+      {
+        "answer": "The media only reports it when conservatives are accused.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 35
+  },
+  {
+    "question": "It's good to give tax cuts and concessions to the wealthy because they will use the money to invest in businesses that increase growth and employ more people. Do you agree?",
+    "spectra": [
+      "right-leaning - left-leaning",
+      "capitalist - socialist"
+    ],
+    "answers": [
+      {
+        "answer": "No. Trickle down economics is a scam that increases inequality.",
+        "reply": "Correct.",
+        "score": 5
+      },
+      {
+        "answer": "Yes.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 36
+  },
+  {
+    "question": "If a trans-man gets pregnant and has a child, what relationship to the child (father/mother/other) should be put on the child's birth certificate?",
+    "spectra": [
+      "transphobic - transfavorable"
+    ],
+    "answers": [
+      {
+        "answer": "Trans-men can't get pregnant because of hormones and surgery.",
+        "reply": "Incorrect but unsurprising ignorance.",
+        "score": -1
+      },
+      {
+        "answer": "By definition, if a person gets pregnant and gives birth to a child, that person is a woman and the MOTHER of that child.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "By definition, if a person is male and a biological parent of a child, then he is a FATHER of that child.",
+        "reply": "Maybe.",
+        "score": 2
+      },
+      {
+        "answer": "The certificate is the child's certificate. To avoid embarrassing them when the certificate is needed later, it should say MOTHER.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "Whatever the man wants it to say.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 37
+  },
+  {
+    "question": "If a student at an all boys school comes out as a trans-girl (or vice versa), should they be required to leave?",
+    "spectra": [
+      "transphobic - transfavorable"
+    ],
+    "answers": [
+      {
+        "answer": "Yes. Since they no longer conform to the school's gender exclusivity.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "Yes, because the school would have to waste money building facilities for just one student.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "No.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 38
+  },
+  {
+    "question": "Some surveys have revealed that 85% of gay men identified as bisexual when they were younger. Also on a dating web site open to all sexualities and genders, bisexual men extremely rarely sought to date women. Should we conclude that bisexuality in men doesn't exist?",
+    "spectra": [
+      "bi-erasing - bi-affirming"
+    ],
+    "answers": [
+      {
+        "answer": "Of course not. No statistics, theories or opinions can contradict how a person experiences their sexuality and identifies at a certain time in their life.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "Yes, bisexuality in men doesn't really exist.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "Yes. All bisexual men are really dishonest or closeted gay men or gay men repressing their sexuality.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 39
+  },
+  {
+    "question": "Does the BI in Bisexual imply that there are only two genders?",
+    "spectra": [
+      "bi-erasing - bi-affirming"
+    ],
+    "answers": [
+      {
+        "answer": "No. It means the person has a binary sexuality. Homosexual (same gender) and Heterosexual (other genders).",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "Yes, there are only two genders.",
+        "reply": "Wrong",
+        "score": -5,
+        "spectra": [
+          "transphobic - transfavorable"
+        ]
+      },
+      {
+        "answer": "Yes. Everyone who identifies as bisexual should change their identity to pansexual.",
+        "reply": "Wrong",
+        "score": -5,
+        "spectra": [
+          "fascist - anti-fascist"
+        ]
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 40
+  },
+  {
+    "question": "Some people like the right wing conspiracy theorist and Trump sycophant Nick Adams describe themselves as \"Alpha Males\". What does it mean?",
+    "spectra": [
+      "right-leaning - left-leaning",
+      "conservative - progressive",
+      "post-truth - pro-truth"
+    ],
+    "answers": [
+      {
+        "answer": "Not sure what an Alph male is but if you have to call yourself one, you're not it.",
+        "reply": "True.",
+        "score": 5
+      },
+      {
+        "answer": "There's nothing wrong with having a small penis but calling yourself an alpha male is a great way to advertise the fact.",
+        "reply": "Correct.",
+        "score": 5
+      },
+      {
+        "answer": "It signals insecurity about your sexuality, gender identity or masculinity. Dig deeper and you'll find a sex pervert, child molester, rapist or violent assaulter of women.",
+        "reply": "Probably.",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "status": "active",
+    "author": "679465390841135126",
+    "index": 41
+  },
+  {
+    "question": "A tee-shirt worn by members of Straight Pride groups pictures a man and a woman dressed for their wedding and states that everyone's parents are heterosexual. What does it mean?",
+    "spectra": [
+      "homophobic - homofavorable"
+    ],
+    "answers": [
+      {
+        "answer": "Simple statement of the truth.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "Since gay people are not infertile and are often biological parents it demonstrates amazing ignorance. In addition, it implies everyone's parents were married to each other at the time they were conceived. It also demonstrates ignorance of the fact that children are often conceived when one or both of their parents are gay by having sexual intercourse, though it's no surprise that Straight Pride people are ignorant.",
+        "reply": "Correct.",
+        "score": 5
+      },
+      {
+        "answer": "Just another example of where right-wing groups, political conservatives, homophobes etc. will say anything to try to attack and insult people but only end up making fools of themselves.",
+        "reply": "Right.",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 42
+  },
+  {
+    "question": "Does 'Freedom of the Press' imply freedom of the press and media to knowingly tell or spread lies?",
+    "spectra": [
+      "post-truth - pro-truth"
+    ],
+    "answers": [
+      {
+        "answer": "Yes.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "No.",
+        "reply": "Correct.",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 43
+  },
+  {
+    "question": "Some people say that if you really believed that Black Lives Matter (BLM), you would make abortion for black women illegal. What do you think about this argument?",
+    "spectra": [
+      "racist - unprejudiced",
+      "post-truth - pro-truth"
+    ],
+    "answers": [
+      {
+        "answer": "Yes, a good argument. Fighting systemic racism is clearly inconsistent with letting women make decisions about their own bodies and lives.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "It's Wrong. The correct meaning of 'lives' in the BLM and abortion  context is the affect of an unplanned pregnancy on her life, her family, her other children, her career, her financial situation, her health etc. especially in an environment of systemic racism.",
+        "reply": "Correct.",
+        "score": 5
+      },
+      {
+        "answer": "Another right wing straw man argument demonstrating their intellectual weakness. 'Because women can make decisions about their pregnancies and reproductive health, it's ok for the police to beat black men to death in the street?' It's just stupid.",
+        "reply": "Right.",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 44
+  },
+  {
+    "question": "Do you support the Black Lives Matter movement?",
+    "spectra": [
+      "racist - unprejudiced"
+    ],
+    "answers": [
+      {
+        "answer": "Yes.",
+        "reply": "Correct.",
+        "score": 5
+      },
+      {
+        "answer": "No because all lives matter.",
+        "reply": "Wrong. The BLM matter opposes systemic racism which primary targets black people.",
+        "score": -5
+      },
+      {
+        "answer": "No, I'm a racist.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "status": "active",
+    "author": "679465390841135126",
+    "index": 45
+  },
+  {
+    "question": "Malaysia is a secular state though Islam is the nominal official religion. 65% are Muslim, 19% Buddhist, 9% Christian, 6% Hindu. What is the origin of the law that criminalises homosexuality for the whole population regardless of religion?",
+    "spectra": [
+      "racist - unprejudiced"
+    ],
+    "answers": [
+      {
+        "answer": "Islamic Sharia Law.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "The British Penal Code retained after independence.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 46
+  },
+  {
+    "question": "In Western democracies, immigration is typically lower and more focussed on skilled migration under left-leaning governments because of pressure from trade unions who want low unemployment and higher wages. Under right-leaning governments, typically immigration is higher and more weighted towards unskilled labour because of pressure from businesses who want lower wages and higher consumption. Why is the political perception the opposite?",
+    "spectra": [
+      "racist - unprejudiced",
+      "right-leaning - left-leaning"
+    ],
+    "answers": [
+      {
+        "answer": "The information in your question is false.",
+        "reply": "Wrong",
+        "score": -5,
+        "spectra": [
+          "post-truth - pro-truth"
+        ]
+      },
+      {
+        "answer": "The voter base of left-leaning parties are more compassionate towards unplanned migrants such as refugees so the (false) impression is that left-leaning parties are 'softer' on immigration. The voter base of right-leaning parties are racists so the parties must create the false impression that they are 'tougher' on migration (such as spending millions to build useless walls) while secretly pandering to their big business backers and increasing unskilled migration.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 47
+  },
+  {
+    "question": "Right leaning governments, to appease their backers in big business, weaken laws that protect worker's wages and conditions and (contrary to perceptions) increase unskilled migration. Businesses then exploit unskilled migrant labour, paying lower wages and conditions and relying on migrants being unaware of laws that protect minimum or fair wages and conditions. Yet those local workers made unemployed or unable to find work by these practices say that migrants 'took' their jobs, blame migrants and start supporting the right leaning parties. Why this inconsistency?",
+    "spectra": [
+      "racist - unprejudiced",
+      "right-leaning - left-leaning"
+    ],
+    "answers": [
+      {
+        "answer": "The information in your question is false.",
+        "reply": "Wrong",
+        "score": -5,
+        "spectra": [
+          "post-truth - pro-truth"
+        ]
+      },
+      {
+        "answer": "Migrants do not TAKE anyone's job. Businesses GIVE their jobs to migrants because they can be more easily exploited.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "Local unskilled workers are often socially conservative and uneducated and therefor right-leaning, xenophobic and racist. They are easily misled by their social groups and right leaning media to blame everyone but those who really created their situation and to vote directly against their interests.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 48
+  },
+  {
+    "question": "These days we often hear victims of crime referred to as survivors rather than victims. Why do you think that is happening?",
+    "spectra": [
+      "post-truth - pro-truth",
+      "conservative - progressive"
+    ],
+    "answers": [
+      {
+        "answer": "It's just wokeness or political correctness 'gone mad'.",
+        "reply": "Wrong",
+        "score": -5,
+        "spectra": [
+          "post-truth - pro-truth"
+        ]
+      },
+      {
+        "answer": "Both words, 'victim' and 'survivor' are equally accurate descriptions but 'victim' focuses on the power of the culprit where 'survivor' focusses on the power and courage of the victim to move on, get past the crime and recover. Therefor, depending on the context, 'survivor' may be more helpful word. It's amazing how conservatives in their social media echo chambers circle-jerk over such purely pragmatic and trivial issues.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 49
+  },
+  {
+    "question": "Some verses of the Bible in original Hebrew or Greek use euphemism. For example to 'lay with' or 'bed' someone in context is to have sex with them, not the literal meaning of just sleeping in the same bed. If the Bible can't be taken literally in it's original languages, how can a person take a translation literally?",
+    "spectra": [
+      "conservative - progressive"
+    ],
+    "answers": [
+      {
+        "answer": "The Bible is the literal word of God, even when a verse in English and the same verse in German have completely different meaning.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "You can't.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 50
+  },
+  {
+    "question": "One of the core beliefs of the Conservative political right is supposed to be 'small government', that is, minimal interference by governments in the economy or people's lives. How is it then that conservatives are stopping women getting abortions and contraception, stopping trans people getting health care, banning and even burning books so that others can't read them, trying to stop people marrying the person they love, opposing people who want to remove systemic racism and discrimination by government agencies etc.?",
+    "spectra": [
+      "conservative - progressive"
+    ],
+    "answers": [
+      {
+        "answer": "Egalitarianism is a progressive-left concept. When conservatives say that they want small government, they mean small government for them, not for you. They have no problem with denying people the very rights they insist on for themselves. They demand the freedom to oppress others.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "Conservatives know what is best for everyone else.",
+        "reply": "No they don't",
+        "score": -5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 51
+  }
+]

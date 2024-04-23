@@ -1,0 +1,5 @@
+What about searching for chatbot replies online? - idea - low.
+
+Activate on mention - high - done
+
+/ commands to manipulate the chatbot db - only list accessible to non-admin for the sake of transparency

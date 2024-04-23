@@ -1,0 +1,20 @@
+{
+  "active": false,
+  "channelid": null,
+  "lastasktime": null,
+  "intervaldays": 7,
+  "maxasked": 1,
+  "nextid": 2,
+  "questions": [
+    {
+      "id": 1,
+      "question": "Do you think meditation is good for health? What about mental health?",
+      "asked": 0,
+      "replies": 0,
+      "addedby": "marq_andrew",
+      "approved": true,
+      "reviewedby": "marq_andrew",
+      "askedtime": null
+    }
+  ]
+}

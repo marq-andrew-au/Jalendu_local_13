@@ -1,0 +1,35 @@
+randomise answers - done
+reorg setup codes so that it only works for the channel its called from - done
+keep track of negative and positive components of the score and write in the welcome - done
+verify user if score is reached. done
+delete channel if score is reached. done
+delete channel and user data on exit. done,
+delete user data if channel is deleted. confused. This whole cleanpu thing need rview = done
+welcome message when user is verified. done
+bot command *rerun exam so that users can rerun the  quiz = done
+add negative score if existing user resets. done
+add negative score for violations, swear words, done
+swaztika in name. done
+
+settings for guild. Make bot portable. done
+
+keep a dossier of users when they leave, guild, left/kicked/banned, reason - done
+dossir update on role changd - done
+dossier present, kickd, banned - donee
+uses racist tc. language. - done
+messages sent - no, potentially too much activity
+exam rsults/profil
+
+bot logging - done
+
+
+reply if an unauthorised user uses an admin command;
+allow bots to issue commands
+authorise a bot to issue commands as administrator
+
+allow edit of questions
+add status to questions pending, active, deleted and add all questions (including pending) to the database
+
+exam in dm mode, exit after all questions asked?
+exam in verification mode, don't show users replies.
+exam in dm mode, dont trap

@@ -1,0 +1,38 @@
+{
+  "831719082679861279": {
+    "username": "Witchy_Hyena#1812",
+    "lockedbyid": "679465390841135126",
+    "lockedbyname": "marq_andrew#2607",
+    "lockdate": "2021-10-13T03:20:56.946Z",
+    "months": 12,
+    "expires": "2022-10-13T03:20:56.946Z",
+    "notified": false
+  },
+  "980086290152312832": {
+    "username": "Dio_Brando#6318",
+    "lockedbyid": "679465390841135126",
+    "lockedbyname": "marq_andrew#2607",
+    "lockdate": "2022-08-15T11:48:59.968Z",
+    "months": 12,
+    "expires": "2023-08-15T11:48:59.968Z",
+    "notified": true
+  },
+  "998215602801999892": {
+    "username": "notfox#9132",
+    "lockedbyid": "679465390841135126",
+    "lockedbyname": "marq_andrew#2607",
+    "lockdate": "2023-05-27T05:51:09.246Z",
+    "months": 12,
+    "expires": "2024-05-27T05:51:09.246Z",
+    "notified": false
+  },
+  "907307331015024690": {
+    "username": "kaylam014#0",
+    "lockedbyid": "679465390841135126",
+    "lockedbyname": "marq_andrew#0",
+    "lockdate": "2023-08-15T00:30:58.760Z",
+    "months": 12,
+    "expires": "2024-08-15T00:30:58.760Z",
+    "notified": true
+  }
+}

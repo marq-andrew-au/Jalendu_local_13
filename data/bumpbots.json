@@ -1,0 +1,32 @@
+{
+  "302050872383242240": {
+    "name": "DISBOARD",
+    "bump_command": "/bump",
+    "bump_channel": "834013095805452318",
+    "delay_minutes": 120,
+    "response": {
+      "type": "embed",
+      "embed_index": 0,
+      "embed_field": "description"
+    },
+    "success": [
+      "The DISBOARD API didn't respond in time! :sob:\nPlease try again later.",
+      "Bump done! :thumbsup:",
+      ":thumbsup:"
+    ],
+    "failure": [
+      "Please wait another",
+      "minutes until the server can be bumped"
+    ],
+    "unknown": [
+      "The DISBOARD API appears to be down! :sob:\nPlease try again later.",
+      "Hi! I am a bot for DISBOARD (https://disboard.org/) :robot:\n\n__**COMMAND LIST**__\n\n**`!d help`**: This!\n**`!d bump`**: Bump this server.\n**`!d page`**: Get a link to the server's DISBOARD page.\n**`!d invite [channel]`**: Set invite to this channel. If [channel] is specified, create an invite for that channel. *(Admin only.)*\n\n**How do I add my server to DISBOARD?**\n\n1. Login on DISBOARD website,\n2. Go to Dashboard,\n3. Click \"Add New Server\"\nFill out your server info and save it. You will be redirected to Discord's authorization screen. If not, click the \"Add Bot\" button on the server edit page.\n\nNeed help? Join the [support server](https://discord.gg/kbQMsHZVwp).",
+      "https://disboard.org/en-GB/server/827888294100074516"
+    ],
+    "bumptime": "2022-04-01T10:25:54.313Z",
+    "nextbumptime": "2022-04-01T12:25:54.313Z",
+    "reminder_sent": false,
+    "remindertime": "2022-04-01T10:51:24.537Z",
+    "badfails": 7
+  }
+}

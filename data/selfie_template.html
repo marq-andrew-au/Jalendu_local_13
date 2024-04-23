@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>replit</title>
+    <link rel="stylesheet" href="https://webresources.marqandrew.repl.co/css/style.css" type="text/css" />
+  </head>
+  <body>
+    <h1>
+      <div>G+MM Discord - Verification by Selfie</div>
+      <div></div>
+    </h1>
+    This is an experimental process aiming to verify people wanting to enter the G+MM server by uploading a selfie <b>while protecting the privacy of the uploader</b>. For auto-verification, the selfie must satisfy the following conditions:
+    <ul>
+      <li>It must be a selfie clearly showing one human face.</li>
+      <li>It must have been taken with a smart phone.</li>
+      <li>It must be uploaded with the same smart phone.</li>
+      <li>It must be uploaded within 30 seconds of being taken.</li>
+      <li>It must have been taken with the front camera of your phone.</li>
+      <li>It must not have been edited in any way.</li>
+      <li>Photo file size must not exceed xM</li>
+      <li>It must contain the exif metadata that allows the program to test these conditions. (If taken wih a smart phone and you haven't done anything to remove it then it should.)</li>
+    </ul>
+    <br>
+    <font color="#b00">INSTRUCTIONS: Go to this page with your phone. Take a selfie with the front camera of your phone. Ensure that it is saved to your phone if it isn't done automatically. Do not apply any filters. Click on the "Choose Files" button below and select the photo you just took. Do not choose the option to take a photo. Click on the "Upload" button.</font>
+    <br>
+    <br>
+
+    <form action="/selfie" enctype="multipart/form-data" method="post" name="fselfie">
+      <input type="file" name="selfie" multiple="false" />
+      <input type="hidden" name="submitTime" id="submitTime" value="" />
+      <input type="hidden" name="submitTZO" id="submitTZO" value="" />
+      <!--ADD FIELDS--> 
+      <input type="submit" value="Upload" onclick="document.fselfie.submitTime.value = new Date().toISOString(); document.fselfie.submitTZO.value = new Date().getTimezoneOffset();" />
+    </form>
+
+    <script>
+ 
+    </script>
+
+    <br>
+    <br>
+
+    <div style="font-size:25px;">
+      <!--RESPONSE--> 
+    </div>
+
+    <br>
+    <br>
+    
+  <h2><font color="#00b">PRIVACY</font></h2>
+  <div>The photo you upload is not stored physically <b>anywhere</b>. It is streamed from your device into the verification program. It is not deleted because it is never saved. No person, including Discord server admins, mods, or members ever see the photo. The Discord server mods just see a "pass","fail" or "none" (nothing sucessfully uploaded). The photo must be uploaded through this web page because Discord strips out the exif information (photo metadata) used by the program. Also if uploaded to Discord in a direct message to the bot, the photo is stored (so that it can be viewed by multiple devices) and therefor may be accessible by url even if you have deleted it. Your Discord user name or alias is not passed to this program. Only the long numeric user object code is used to track the relationship between an uploaded photo and a discord user so that they can be verified. Only this Discord user object code and the verification pass, fail or null is returned by the verification program to Discord. The reason for fail is only seen by you (or anyone looking over your shoulder).</div>
+
+    <h2><font color="#00b">Data Extracted or Inferred</font></h2>
+    <div>
+      <!--DATA--> 
+    </div>
+  </body>
+</html>

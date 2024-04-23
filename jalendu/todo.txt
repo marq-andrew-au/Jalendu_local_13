@@ -1,0 +1,120 @@
+
+Rewrite vc monitor and generate timetable - high - done.
+
+Why doesn't sessions properly delete? - high.
+
+Newcomers function failing apparently hitting rate limits - bug - high - fixed.
+
+Fix to newcomers function now invalidates the code that fixes other roles - high. 
+
+qotd function = medium - done.
+
+Learn about callbacks - high
+
+Fix chatbot db connection - at least don't allow the bot to fail - high
+
+Cleanup still doesn't work properly - depends on learning about callbacks - high
+
+Change message to depend on automod violation type - high.
+
+Why doesn't moderate verify trigger cleanup ? - bug - this is caused by not considerinig the synchronicity of js? - Need to review functions that need to be run in a particular order.  high.
+
+Also make the welcome sent to member introductions prettier. Look at this https://dev.to/en3sis/advanced-discord-js-custom-embeds-using-attachments-2bpn
+high - check if it works on manual verify - high
+
+Can the verify functions be consolidated into one function? - medium.
+
+Add microphone on off to the vc logging. Investigate use of the session id property - low.
+
+Is it possible to search for avatar image online for new members - idea - low.
+
+Further modularise the code - low
+
+Work out how to update to node-fetch v3 - low
+
+
+----- Everything below is done -------
+
+Why is bumpbots buggy? - high - fixed - done
+
+Add a /data function to list and restore from a backup - medium - done
+
+Make the bumpbots bumpremind function accessible. If initiated as a command, return how long to wait or how much time is wasted if waiting - high - done.
+
+test strippinig diacritics in automod:
+const str = "Crème Brulée"
+str.normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+> "Creme Brulee"
+
+or 
+
+str.normalize("NFD").replace(/\p{Diacritic}/gu, "") - high - done
+
+Move all data json files into a data directory - high - done.
+
+modularise and abstract the bumpbot code - medium - in progress - done.
+
+Make a command for adding words to data - high - done.
+
+Complete channel descriptions - low - mostly done - waiting for yoga rooms descriptiuon from yogis - done - no reply.
+
+Detect success or failure of disboard bump and record it in bumpers - low - done.
+
+Consolidate the two pieces of code that do the same #roles channel emoji checking - medium - done
+
+Make the message cleanup function return results as a message reply if issued as a command - medium - done
+
+Make "hidden" /commands work in DMs - high - done
+
+Why did the member introductioons welcome message say "please welcome undefined" for Jurgen? - high - can't reproduce - delete - no I reproduced it - done.
+
+put the welcome into a json so it can be changed without restarting the server. - done
+
+Why not delete additional reaction roles to the roles questions as they happen? - medium - done
+
+Fix bump thanks because the format has changed - high - done.
+
+Bot mentions don't resolve or notify - high! - testing - done
+
+Use a regex to detect links - see @TheSaviorLegend 's posts - high - done.
+
+Add an age lock - high - done
+
+rewrite the dms sent by the bot as json. include a footnote hinting at what would trigger negative automod in the welcome - medium - done.
+
+Include channels directory in the welcomedm - medium - done
+
+Readme doesn't have line spacing at the start of message divisions - medium - done.
+
+Add excessive length and all upper case as automod triggers - high - done.
+
+Message cleanup must delete messages of muted newcomers - high - done
+
+Make the verify commands both manual and automod, send a message to the member introductions channel - high - done.
+
+Split message cleanup into a separate function and then trigger it on specific events such as when a member is verified or leaves the server - high - done.
+
+Stop warning invaders. It only challenges them - high - done
+
+Change the /welcome command to delete all messages from landing zone, write the message there and then delete the pin - high - done.
+
+A /help command - medium - testing - done
+
+
+Disable automatic recompile of the channels ditrectory - high - done.
+
+Put security around the hidden comands where necessary - high - done.
+
+Bug fix, welcomeDM not found - crash! - welcomeDM was moved into the automod module but is referenced by the /moderate verify command. Changed the /moderate verify command to reference the function in the module. Doesn't seem like the ideal solution - done.
+
+Fix application commands permissions - done - sort of works. If moderate is still visible to verified - done-ish.
+
+Fix and test the datacheck command - done
+
+Is it possible to globally stop notifications for some channels for all users? - deleted - the default notifications for the server are @mentions - deleted
+
+Change the deleted messages channel to be a complete audit logging channel for landing-zone - medium - in progress - testing - done.
+
+Rename the see deleted messages role to relate to the landing zone log - high - done
+
+checking that the landing-zone-log channel name doesnt cause a problem - fixed .includes vulnerability - done

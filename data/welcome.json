@@ -1,0 +1,19 @@
+{
+  "type": "rich",
+  "title": "**Welcome to Gay+ Men Meditating!**  <:yoga:880724849889259570>",
+  "description": "We are a safe and friendly group of gay+ guys interested in practicing meditation or yoga. To join, you have to properly answer these questions:",
+  "color": 12320813,
+  "fields": [
+    {
+      "value": "**1**. Tell us something about yourself (age, sexuality, interests etc.)\n**2**. Describe your experience with meditation or yoga or why you are interested.\n**3**. Tell us why you want to join this group.\n\nInclude @moderator in your message so we will be notified of your answers.*",
+      "name": "\u200B",
+      "inline": false
+    }
+  ],
+  "thumbnail": null,
+  "image": null,
+  "footer": {
+    "text": "\u200B\n*You can directly message a moderator if you prefer. We will review your answers as soon as possible. #landing-zone is auto-moderated, so please keep your answers brief, proper-cased and free of links or any terms of abuse.",
+    "iconURL": null
+  }
+}

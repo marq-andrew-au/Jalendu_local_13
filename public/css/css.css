@@ -1,0 +1,49 @@
+h1 {
+    font: normal 24px Arial, sans-serif;
+    color: #444;
+}
+.j-table {
+    table-layout: fixed;
+    border: solid 1px #EEEEEE;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
+}
+.j-table thead th {
+    background-color: #EFEFEF;
+    border: solid 1px #EEEEEE;
+    color: #444;
+    padding: 5px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #fff;
+}
+.j-table tbody td {
+    border: solid 1px #EEEEEE;
+    color: #333;
+    padding: 6px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+body {
+  margin: 0;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  top: 0;
+  left: 0;
+}
+
+.header img {
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+
+.header h1 {
+  position: relative;
+  top: 18px;
+  left: 10px;
+}

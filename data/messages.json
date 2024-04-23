@@ -1,0 +1,22 @@
+{
+  "welcomedm": {
+    "type": "normal",
+    "content": "__Welcome to Gay+ Men Meditating.__\n\nYou have been verified but please go to <#828724253938942014> to set your age band.\nNSFW channels are not visible to you unless you choose the 18+ age role*.\nRoles are set by clicking on the appropriate emoji with the number beside it under each question.\n\nPlease also look at the following channels:\n\n1. <#828722989750026250>: for an overview.\n2. <#887168812632391740>: for a guide to the channels.\n3. <#827891914216177685>: to review the rules.\n4. <#833559519611060244>: to introduce yourself to the community (optional).\n5. <#834018953834922005>: to read what times other members sit online so that you can join them.\n6. To set your time-zone so that the <@471091072546766849> bot can convert times that members mention in sitting times to your local time. Go to <#834013095805452318>, enter ```/set me``` and follow the prompts.\n\nTo protect your privacy, the message your wrote to request admission will have been deleted. You can introduce yourself to the group in member-introductions if you wish."
+  },
+  "reminder": {
+    "type": "normal",
+    "content": "__Welcome to Gay+ Men Meditating.__\n\nTo get full access, you must send a message mentioning @moderator in the #landing-zone channel or to a moderator directly. Please include:\n\n**1. Something about yourself** e.g. your age, your country or anything you want to tell us.\n**2. Your experience with meditation if any** (none is fine as long as your are interested).\n**3. You reasons for wanting to join this group.**\n\nWe have strong entry requirements to keep the community safe and comfortable to express themselves and to exclude people who join casually or simply to troll. After 7 days from the time you joined, if you have not satisfied the entry requirements, you will be removed."
+  },
+  "muted": {
+    "type": "normal",
+    "content": "__Thankyou for your interest in Gay+ Men Meditating.__\n\nSadly, because of repeated violation of the automod rules, all of your messages in the #landing-zone channel have been deleted. We recognise the effort you put into composing them and the time wasted in your **limited** and likely **pointless** life, time that you will never get back, and for that we are sincerely *sorry*."
+  },
+  "homophobic": {
+    "type":"normal",
+    "content": "I (a bot) detected homophobic language in your messages. If you joined merely to **troll** us because we are **gay+** men, we know that it has long been recognised in the field of **psychology** that men confident of **their own sexuality** rarely have a problem with **anyone-elses**. I will let you in on a secret: Gay+ men recognise this in people like **you** all the time. We are rarely offended but are more likely to feel compassion, pity or disgust.\nA **meditation practice** or a visit or two to a **qualified clinical psychologist** may do you some good."
+  },
+  "muted_end": {
+    "type":"normal",
+    "content": "Not only were all of your messages deleted, you have lost permission to post to #landing-zone so there isn't anything left for you to do here. If you wait around for a few days, you might find your permission to post restored. *Thankyou.*"
+  }
+}

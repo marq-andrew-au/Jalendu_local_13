@@ -1,0 +1,128 @@
+__Gay Men Meditating Discord - Guidance for Moderators.__
+
+1. Aims.
+2. How #landing-zone works.
+3. Moderator responsibilities.
+4. Specific areas: 
+- Direct messages.
+- Minors (Age <18).
+5. Instructions.
+
+__Aims__
+
+My main aim in setting up this server was to make a place for gay+ (gay, bisexual, bi-curious etc.) men who are interested in meditation to come together and sit together in meditation since discord offers some pretty good video conferencing capability that I think is about the best available. I also wanted to learn how to do it.
+
+I do believe that gay men have or at least have access to a special spirituality that I think derives from an intuition of the subconscious; the awareness that the conscious self isn’t as substantial or in control as it might otherwise seem.
+
+As the server has grown, other aims have become clear. It has become a place where men can become comfortable with their sexuality and comfortable with their bodies, issues of ageing and the relationships between younger and older gay men. I know for some younger men here, joining this server and being in this group has been a significant step on the path to self-acceptance.
+
+The server has also expanded to include yoga as well as channels for support and healing.
+
+When I first made this group, membership was by private invitation only, mainly to people in my friends list in Insight Timer. To grow the community, I started advertising the server on Twitter, Reddit and then on the Disboard.org site that lists Discord servers. I was shocked/saddened/angered by the fact that almost immediately, people joined the server and posted graphic and violent homophobic abuse.
+
+I deleted all public listings (and considered deleting the group) but after doing some research I landed on the “landing-zone” idea that quarantines newcomers until they are verified. Monitoring the landing zone to vet people trying to join is the most important responsibility of moderators here.
+
+__How #landing-zone works__
+
+Members of a Discord server may be assigned roles. Roles are defined to have various permissions. On Gay Men Meditating, everyone is assigned at least one role. The role “newcomer” is assigned automatically on joining the server by the Carl bot.
+
+(A bot is a member of the server who is actually a program that can monitor events on the server, respond to commands and monitor messages).
+
+All channels on Gay Men Meditating are defined as “private”. That means a member has to have the appropriate role to be able to see them. (You can tell that a channel is private by the little padlock in the top right of the channel icon). The default Discord @everyone role doesn’t give you access to anything. The important roles on Gay Men Meditating are “newcomer”, “verified”, “moderator” and “18+”.
+
+Only moderator and newcomer can see the landing zone. That means that on joining the server, new members can only see the landing zone. Admission to the group requires the verified role to be assigned to the member. 
+
+Newcomers are requested to write a message to the moderators “Including a bit about yourself, your experience with meditation or yoga and why you want to be part of this group.” If that message is acceptable, the “verified” role is assigned to that user and the “newcomer” role removed. 
+
+We remove the “newcomer” role so that verified members can’t see the landing zone and so are protected from exposure to anything that an abuser might post there. Also, because their access to landing zone has been removed, later newcomers can’t even see verified member’s IDs in the list on the right of the screen and so can’t DM them.
+
+Moderators can assign roles and remove roles manually but it is preferred that they use the Jalendu bot /moderate commands, described below.
+
+Obviously newcomers who attempt any kind of abuse in the landing-zone should be banned. I have banned people purely on the basis of their user name or avatar where their intention has been clear. A member who is banned can’t get back onto the server unless they are unbanned. A member who is kicked can rejoin. Newcomers can also be muted. By assigning the newcomer-muted role, they lose permission to post messages in landing-zone, and therefore, everywhere.
+
+Also Jalendu bot is monitoring messages by newcomers in landing zone. If messages contain one or more of a set of triggering words and phrases, an auto moderation function is triggered. They may result in automatic verification or the newcomer may be muted. Messages that trigger auto-moderation are deleted so you can only see them in the landing-zone-log channel. Newcomers will be muted after triggering a violation three times. Violations are posting terms of abuse (homophobic, racist, other), posting URLs or file links, messages of excessive length or messages over 50 characters that are all upper case.
+
+(If you see a person on another server posting abuse or that are spambots, let me @marq\_andrew know because it is possible to ban people who aren’t even on the server yet. I’ve noticed some people attack several gay themed servers in succession.)
+
+ This means that of course moderators remain exposed. Please consider this if you are a moderator. Believe me, some of the things I’ve seen posted by invaders were extreme. I think you can remove the moderator role from yourself if you feel the need to.
+
+Also, people with the newcomer role don’t have permission to post images. That thwarts the typical mode of attack of most homophobic, racist, spamming newcomers.
+
+Members with the verified role can see all channels except for the landing zone and nsfw channels. In addition, the role “18+” is required to see NSFW channels. (Yes I know there is debate about the difference in meaning between 18+ and NSFW). The 18+ role is self-assigned in the roles channel. So far this has not been a problem. In addition, there are a few channels that can only be seen by moderators.
+
+There is a colour plan for user names based on their important roles:
+* moderator is blue.
+* newcomer is yellow.
+* verified 18+ is green
+* verified 14 - 18 is orange.
+* verified but no age band set is red.
+
+Moderators can see the Carl-bot and Jalendu bot logging of members arrival, role assignment and departure in the system-messages channel. You will see that quite a lot of people arrive and soon after leave. They are either thwarted invaders, those who didn’t read or understand the instructions or possibly people intimidated by the verification requirement. 
+
+
+__Moderator Responsbilities__
+
+I see the responsibilities of moderators here as:
+
+1. To protect the community from people who join to troll, abuse, spam or attempt to hack the server.
+2. To vet people seeking to join, to make sure they are not here to do harm and that they are serious and appropriate prospective members.
+
+This should be the main activity in guiding this server. My idea was that once we have allowed in gay+ men interested in meditation or yoga, our activity to limit or influence their behaviour on the server should be very light.
+
+For example, when people were posting images of porn including idealised beautiful men in the nsfw channel where that channel was also being used for men to be comfortable with their own bodies, it was pointed out that the aims of these activities were interfering with each other. Instead of trying to stop them, we prefer to split the channel into two that satisfy each separately.
+
+3. We need to keep an eye on the activities of minors on the server. See the section below.
+4. We should ensure that members comply with the Discord TOS including the Community Guidelines
+[https://discord.com/terms]
+	[https://discord.com/guidelines]
+6. If you see anyone in landing zone that hasn’t answered the entry questions, it may be worth doing an investigation. If you see that they are members of appropriate mutual servers with you, you recognise them from elsewhere or their profile indicates that they may be serious members, you can consider direct messaging them or just verifying them.
+7. If you see verified members who have not set their age role (their username is red), they may need some help setting their roles.
+8. If you see someone behaving in a way that is disruptive, against the Discord terms, Community Guidelines or Server Etiquette, raise it with the other moderators in the moderator discussion channel.
+
+__Other Moderator Subjects__
+
+**Direct Messages** 
+
+Discord allows direct messages between members if they are marked as friends or they have at least one mutual server. It is possible to send a friend request to a user just by their ID, without a mutual server. You can block DMs from a user. Discord also allows you to block DMs from the members of a server but that doesn’t prevent DMs from a member of that server if they are marked as a friend or they are a mutual member of another server in which you have not blocked DMs.
+Therefor it is my strong view that although mutual server membership facilitates DMs, it is irrational and unenforceable for server admins or moderators to make rules about DMs, even though many do it.
+We may advise a person on how to block DMs from a person or the server generally but it is not our role to intervene in anything that is alleged to have happened between members in DMs.
+
+** Minors**
+
+It has always been my view that mature young gay men of any age should be welcomed to this group. The sexuality of young teens is an extremely fought issue these days. This leaves group admins and moderators anxious about how to deal with minors. We do have some responsibility of care but there is confusions about the laws and that has led many groups to simply exclude minors unnecessarily, cutting LGBT minors from any kind of understanding, advice and support. 
+
+The Discord TOS states:
+
+*You may not sexualize minors in any way. This includes sharing content or links which depict minors in a pornographic, sexually suggestive, or violent manner, and includes illustrated or digitally altered pornography that depicts minors (such as lolicon, shotacon, or cub). We report illegal content to the National Center for Missing and Exploited Children.*
+
+Even though the age of consent in your country might be 13-17 (or such a legal concept may not exist), online laws generally define a minor as <18.
+
+“Sexualise” seems to me to be open to a wide range of interpretations but I reject any interpretation that would differ based on the person’s sexuality or gender. (The now defunct Reddit site for listing discord servers had a bot that flagged any server that included the words “gay” or “lgbt” in their titles or descriptions as nsfw/18+).
+
+I’m not a lawyer and please correct anything that is wrong, but this is how I interpreter the guidelines and the law.
+
+A person under the age of 18 must not post a sexual image of themselves online. Members must not post sexual images of minors even of they are just illustrations.
+
+It is probably not illegal for a minor to passively access and view pornography or sexual images of adults though it may be illegal to deliberately expose a minor to them. It is a requirement for a person to confirm that they are 18+ before being allowed to access sexual images. It is NOT (yet) a requirement to verify that their answer is the truth. 
+
+It is not illegal to give a minor abstract advice on sex. It is probably not illegal for a minor to describe their sexual acts to an adult though it may be against the Discord TOS to do so in a public channel. It is probably illegal for an adult to describe their own sexual acts to a minor.
+
+“Sexting” is basically (text only) sexual role play online. It is illegal for an adult and a minor to sext. In some places it is illegal for two minors to sext. It is illegal to suggest or arrange sex with a minor, even if it would be legal to have sex with that person in real life.
+
+What if they lie about their age?
+
+On Gay Men Meditating, a person must select the Age 18+ role in answer to the question “What is your age?” to get access to any nsfw (18+) channels. If they choose Age 14-17 or they don’t select anything they don’t get access. 
+
+In addition, we have the (so far unused) **/moderate agelock**command to prevent a person selecting the Age 18+ role or for it being assigned manually. 
+
+It is illegal to lie about your age online. If a minor lies about their age to passively access areas of the server explicitly off-limits to them, then that is their problem.
+
+However, I have seen advice on legal web sites in the USA to the effect that when it comes to explicit online sexual acts with a minor such as sexting and sharing sexual images, the fact that they lied about their age may not be a solid defence.
+
+__Instructions__
+
+Verification is best done by using the Jalendu application command **/moderate verify** which adds the verified role, deletes the newcomer role and then sends the member a message welcoming them and giving them instructions about how to set roles. Type / in a message, preferably in a moderator only channel like moderator discussion, select /moderate, TAB select verify, TAB start typing the member name starting with @, select the member to verify and press enter.
+
+Although moderators can verify, kick, ban etc. members manually, it is best to use the /moderate commands to be accountable to the other moderators as well as the /moderate commands do other things such as cleaning up landing zone messages or welcoming the member. They also write a message to system logs so we can see what each other is doing without having to look at the audit logs.
+
+Please enter /readme to get a direct message from Jalendu with the complete instructions for the /moderator command as well as a description of his “hidden” commands and functions.
