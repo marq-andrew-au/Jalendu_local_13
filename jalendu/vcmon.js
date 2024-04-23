@@ -281,6 +281,8 @@ module.exports.log = function(client, member) {
         init = false;
       }
 
+      mem = guild.members.cache.get(id);
+
       const cols = new Array();
       cols[0] = session.username;
       cols[1] = session.start.toLocaleTimeString('en-US', { hour12: false });
@@ -362,9 +364,15 @@ module.exports.session_start = function(client, member) {
 
   const guild = client.guilds.cache.get('827888294100074516');
 
+  const mem = guild.members.cache.get(member.id);
+
+  //console.log(JSON.stringify(mem,null,2));
+
+  //console.log(JSON.stringify(member,null,2));
+
   const sitting_times = client.channels.cache.get('834018953834922005');
 
-  const anonymous_sitters = client.channels.cache.get('1074957843784011817');
+  //const anonymous_sitters = client.channels.cache.get('1074957843784011817');
 
   const channel = guild.channels.cache.get(member.channelId);
 
@@ -426,24 +434,38 @@ module.exports.session_start = function(client, member) {
 
     let pingrole = '';
 
-    if (channel.name.includes('meditation')) {
-      pingrole = '<@&881813694420500520>';
+    if(channel.id === '827888294100074520'){
+      pingrole = pingrole + '<@&1232309879260057622>';
     }
-    else if (channel.name.includes('yoga')) {
-      pingrole = '<@&881813802268655686>';
+    if(channel.id === '827890804701003827'){
+      pingrole = pingrole + '<@&1232309118526689373>';
     }
-
-    if (member.member.roles.cache.get('941031781065433139') && !channel.name.includes("test")) {
-      sitting_times.send(`<@${member.id}> has joined the ${channel.name} <@&941031781065433139> ${pingrole}`);
-      //console.log(session.username + ' <@' + member.id + '>');
+    if(channel.id === '878067342888808448'){
+      pingrole = pingrole + '<@&1232309665207943168>';
     }
-    else {
-      anonymous_sitters.send(`<@${member.id}> has joined the ${channel.name} <@&941031781065433139> ${pingrole}`);
+    if(channel.id === '827993501920657479'){
+      pingrole = pingrole + '<@&1232310035355406386>';
     }
 
-    anonymous_sitters.send(`${member.nickname} has joined the ${channel.name} <@&941031781065433139> ${pingrole}`);
+    if(channel.id === '827991599304015922'){
+      pingrole = pingrole + '<@&1232310173092155464>';
+    }
+    if(channel.id === '878067707889713193'){
+      pingrole = pingrole + '<@&1232310305498071061>';
+    }
+    if(channel.id === '835771866064093184'){
+      pingrole = pingrole + '<@&1232310461500883005>';
+    }
 
-    //console.log(this.vcmon_sessions);
+    // if (member.member.roles.cache.get('941031781065433139') && !channel.name.includes("test")) {
+    //   sitting_times.send(`<@${member.id}> has joined the ${channel.name} <@&941031781065433139> ${pingrole}`);
+    // }
+    // else {
+    //   anonymous_sitters.send(`<@${member.id}> has joined the ${channel.name} <@&941031781065433139> ${pingrole}`);
+    // }
+
+    sitting_times.send(`${mem.displayName} has joined the ${channel.name} ${pingrole}`);
+
   }
   else {
     this.session_change(client, member);
@@ -535,9 +557,9 @@ module.exports.session_end = function(client, member) {
 
   this.vcmon_sessions[member.channelId] = vc;
 
-  this.log(client, member);
-
   console.log(JSON.stringify(this.vcmon_sessions,null,2));
+
+  this.log(client, member);
 
   this.usagecount(client, member.channelId, session.start, session.end, session.selfVideo_duration);
 }
