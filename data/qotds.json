@@ -1,7 +1,7 @@
 {
   "active": true,
   "channelid": "900243601303420988",
-  "lastasktime": "2024-04-20T08:37:11.037Z",
+  "lastasktime": "2024-04-27T09:04:44.843Z",
   "intervaldays": 7,
   "maxasked": 2,
   "nextid": 101,
@@ -771,13 +771,14 @@
     {
       "id": 87,
       "question": "What is your opinion about why religious faith is (or is not) important?",
-      "asked": 0,
+      "asked": 2,
       "replies": 0,
       "addedby": "marq_andrew",
       "status": "approved",
       "reviewedby": "marq_andrew",
-      "askedtime": null,
-      "random": 0.6593462225909783
+      "askedtime": "2024-04-27T09:04:44.843Z",
+      "random": 0.6593462225909783,
+      "messageid": "1233705385408462868"
     },
     {
       "id": 77,

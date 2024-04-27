@@ -13,6 +13,10 @@ var exif = require('./exif.js');
 
 var qotd = require('./qotd.js');
 
+var jalenduDb = require('./jalenduDb.js');
+
+const jalenducb = jalenduDb.setup();
+
 module.exports.ready = function(client) {
   console.log(`Logged in as: ${client.user.tag}`);
 
@@ -722,17 +726,17 @@ module.exports.messageCreate = async function(client, message) {
       jautomod.data(message);
     }
     else if (content.startsWith('chatbot') || content.startsWith('cb')) {
-      //jalenduDb.commands(jalenducb, message);
+      jalenduDb.commands(jalenducb, message);
     }
   }
   else if (dm) {
-    //jalenduDb.message(jalenducb, message);
+    jalenduDb.message(jalenducb, message);
     //exif.exifdata(message);
   }
   else if (message.mentions) {
     if (message.mentions.members.first()) {
       if (message.mentions.members.first().user.username === 'Jalendu') {
-        //jalenduDb.message(jalenducb, message);
+        jalenduDb.message(jalenducb, message);
       }
     }
   }

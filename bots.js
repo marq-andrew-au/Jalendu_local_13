@@ -27,10 +27,6 @@ const { exec } = require('node:child_process');
 
 const { get } = require("https");
 
-//var jalenduDb = require('./jalendu/jalenduDb.js');
-
-//const jalenducb = jalenduDb.setup();
-
 var jautomod = require('./jalendu/jautomod.js');
 
 jautomod.setup();

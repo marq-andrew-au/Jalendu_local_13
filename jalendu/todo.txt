@@ -1,15 +1,9 @@
 
-Rewrite vc monitor and generate timetable - high - done.
+Somehow get the calendar and other http things working
 
 Why doesn't sessions properly delete? - high.
 
-Newcomers function failing apparently hitting rate limits - bug - high - fixed.
-
 Fix to newcomers function now invalidates the code that fixes other roles - high. 
-
-qotd function = medium - done.
-
-Learn about callbacks - high
 
 Fix chatbot db connection - at least don't allow the bot to fail - high
 
@@ -32,8 +26,18 @@ Further modularise the code - low
 
 Work out how to update to node-fetch v3 - low
 
+Complete channel descriptions - low - mostly done - waiting for yoga rooms descriptiuon from yogis - done - needs redoing.
+
 
 ----- Everything below is done -------
+
+qotd function = medium - done.
+
+Learn about callbacks - high - done.
+
+Newcomers function failing apparently hitting rate limits - bug - high - fixed.
+
+Rewrite vc monitor and generate timetable - high - done.
 
 Why is bumpbots buggy? - high - fixed - done
 

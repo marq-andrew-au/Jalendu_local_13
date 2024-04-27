@@ -6,10 +6,9 @@ module.exports.setup = function() {
   const arpquuxb = process.env['arpquuxb'];
 
   const jalendu = new pg.Client({
-    user: 'arpquuxb',
-    host: 'rosie.db.elephantsql.com',
-    database: 'arpquuxb',
-    password: arpquuxb,
+    user: 'marqw',
+    host: '127.0.0.1',
+    database: 'marqw',
     port: 5432,
   });
 
