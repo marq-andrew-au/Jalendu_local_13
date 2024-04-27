@@ -338,6 +338,11 @@ module.exports.ga_commands = function(client, message, guildtype) {
       }
     });
   }
+  else if (admin && command[1] === 'demote' && guildtype !== 'dm') {
+    if (message.mentions.members){
+
+    }
+  }
   else {
     message.reply("Unknown bot command").catch(console.error);
   }

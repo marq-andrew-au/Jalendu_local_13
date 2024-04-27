@@ -334,7 +334,7 @@ module.exports.automod = function(message, test = false) {
 
       if ((Date.now() - message.author.createdAt) / (24 * 60 * 60 * 1000) < 56) {
         dels.send(`${message.author} was not auto-verified because the account is less than 56 days old.`).catch(err => console.log(err));
-        message.author.send(`Thankyou for your message in Gay+ Men Meditating. You would have been verified automatically however our group has been seriously attacked recently so we no longer automatically verify relatively new Discord accounts. Please send a selfie holding a paper on which is written your Discord ID to @marq_andrew if you still want to join.`).catch(err => console.log(err));
+        message.author.send(`Thankyou for your message in Gay+ Men Meditating. You would have been verified automatically however our group has been seriously attacked recently so we no longer automatically verify relatively new Discord accounts. Please send a selfie holding a paper on which is written your Discord ID to <@679465390841135126> or <@365725452809011211> if you still want to join.`).catch(err => console.log(err));
         return;
       }
 
