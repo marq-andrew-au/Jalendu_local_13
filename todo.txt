@@ -1,1 +1,6 @@
-todo.text
+GMM age off people with no age role.
+GA demote command.
+GA log reason for auto-demote
+Ask newcomers new to discord to send selfie to the bot to 'protect their privacy' then relay the image to moderators discussion
+
+restart the bot chat
