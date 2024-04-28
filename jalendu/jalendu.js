@@ -175,9 +175,21 @@ module.exports.reactions_fix = function(reaction) {
     if (reaction.emoji.name !== 'lotus_meditator'
       && reaction.emoji.name !== 'yoga') {
       reaction.remove();
+      }
+    }
+    else if (reaction.message.id === '1232327452227932250') {
+      if (reaction.emoji.name !== 'sloth'
+        && reaction.emoji.name !== 'person_in_lotus_position'
+        && reaction.emoji.name !== 'man_bowing'
+        && reaction.emoji.name !== 'date'
+        && reaction.emoji.name !== 'foot'
+        && reaction.emoji.name !== 'leg'
+        && reaction.emoji.name !== 'eggplant') {
+        reaction.remove();
+      }
     }
   }
-}
+
 
 
 module.exports.interactionCreate = async function(client, interaction) {

@@ -2613,5 +2613,32 @@
     "author": "1226043516430323742",
     "status": "active",
     "index": 86
+  },
+  {
+    "question": "Palestine should be a free, independent and democratic state, universally recognised with full membership of the UN, free of the illegal Israeli settlements and occupation, with East-Jerusalem as its capital. Do you agree?",
+    "spectra": [
+      "authoritarian - democratic",
+      "fascist - anti-fascist"
+    ],
+    "answers": [
+      {
+        "answer": "Yes",
+        "reply": "Correct.",
+        "score": 5
+      },
+      {
+        "answer": "No",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "824590241922023445",
+    "status": "active",
+    "index": 87
   }
 ]

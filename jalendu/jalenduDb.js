@@ -54,6 +54,11 @@ module.exports.message = function(jalendu, message) {
 
   const username = message.author.username;
 
+  const d = new Date();
+
+  const time = d.toLocaleTimeString();
+  const UTC = d.toUTCString();
+
   let contexts = ['*'];
 
   let blocked = 'N';
@@ -118,6 +123,8 @@ module.exports.message = function(jalendu, message) {
 
             let reply = results.rows[index].reply;
             reply = reply.replace('${username}', `${message.author}`);
+            reply = reply.replace('${time}', `${time}`);
+            reply = reply.replace('${UTC}', `${UTC}`);
 
             message.channel.send(reply);
             context_out = results.rows[index].context_out;

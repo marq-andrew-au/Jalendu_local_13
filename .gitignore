@@ -4,3 +4,4 @@ db copy/
 db/db*
 zzz*
 node_modules/
+logs/
