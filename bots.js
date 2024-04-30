@@ -161,10 +161,9 @@ jalendu.once('ready', async () => {
   jalendu_code.ready(jalendu);
 
   jalendu_code.newcomers(jalendu);
-
   qotd.ask(jalendu);
-
   jautomod.monitor_maint(jalendu);
+  //jalendu_code.roles_fix(jalendu);
 
   checkminutes = 120;
   checkthe_interval = checkminutes * 60 * 1000;
@@ -173,6 +172,7 @@ jalendu.once('ready', async () => {
     jalendu_code.newcomers(jalendu);
     qotd.ask(jalendu);
     jautomod.monitor_maint(jalendu);
+    jalendu_code.roles_fix(jalendu);
   }, checkthe_interval);
 
 
@@ -193,7 +193,7 @@ jalendu.once('ready', async () => {
 
   const roles = jalendu.channels.cache.get('828724253938942014');
 
-  await roles.messages.fetch({ limit: 100 }).then(async messages => {
+  await roles.messages.fetch({ limit: 10 }).then(async messages => {
     messages.forEach(message => {
       if (message.reactions) {
         message.reactions.cache.each(async (reaction) => {
@@ -386,7 +386,7 @@ app.post('/selfie', async (req, res, next) => {
     let oldPath = files.selfie[0].filepath;
 
     let newPath = path.join(__dirname, 'uploads')
-      + `/${ts}_${id}.${ext}`;
+    + `/${ts}_${id}.${ext}`;
 
     let rawData = fs.readFileSync(oldPath);
 

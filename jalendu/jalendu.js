@@ -111,24 +111,7 @@ module.exports.newcomers = function(client) {
       }
     }
     else {
-      // if (member[1].roles.cache.some(rolen => rolen.name === 'newcomer')) {
-      //   member[1].roles.remove(newcomer).catch(err => console.log(err));
-      // }
-      // if (member[1].roles.cache.some(rolen => rolen.name === 'newcomer-muted')) {
-      //   member[1].roles.remove(newcomer_muted).catch(err => console.log(err));
-      // }
-      // if (member[1].roles.cache.some(rolen => rolen.name === 'newcomer-reminded')) {
-      //   member[1].roles.remove(newcomer_reminded).catch(err => console.log(err));
-      // }
-      // if (member[1].roles.cache.some(rolen => rolen.name === 'newcomer-kicked')) {
-      //   member[1].roles.remove(newcomer_kicked).catch(err => console.log(err));
-      // }
-      // if (member[1].roles.cache.some(rolen => rolen.name === 'newcomer-spoke')) {
-      //   member[1].roles.remove(newcomer-spoke).catch(err => console.log(err));
-      // }
-      // if (!member[1].roles.cache.some(rolen => rolen.name === 'member')) {
-      //   member[1].roles.add(member_role).catch(err => console.log(err));
-      // }
+
     }
   }
   // }
@@ -144,6 +127,36 @@ module.exports.newcomers = function(client) {
 
   //jautomod.message_cleanup(jalendu);
 }
+
+
+module.exports.roles_fix = function(client){
+
+  const guild = client.guilds.cache.get('827888294100074516');
+
+  const newcomer = guild.roles.cache.find(rolen => rolen.name === 'newcomer');
+  const newcomer_muted = guild.roles.cache.find(rolen => rolen.name === 'newcomer-muted');
+  const newcomer_spoke = guild.roles.cache.find(rolen => rolen.name === 'newcomer-spoke');
+  const newcomer_reminded = guild.roles.cache.find(rolen => rolen.name === 'newcomer-reminded');
+  const newcomer_kicked = guild.roles.cache.find(rolen => rolen.name === 'newcomer-kicked');
+  const member_role = guild.roles.cache.find(rolen => rolen.name === 'member');
+
+  guild.members.cache.each(member => {
+    if(!member.bot){
+      if(member.roles.cache.some(rolen => rolen.name === 'verified')){
+        member.roles.remove(newcomer).catch(err => console.log(err));
+        member.roles.remove(newcomer_muted).catch(err => console.log(err));
+        member.roles.remove(newcomer_reminded).catch(err => console.log(err));
+        member.roles.remove(newcomer_kicked).catch(err => console.log(err));
+        member.roles.remove(newcomer_spoke).catch(err => console.log(err));
+        member.roles.add(member_role).catch(err => console.log(err));
+      }
+      else {
+        member.roles.add(newcomer).catch(err => console.log(err));
+      }
+    }
+  });
+}
+
 
 
 module.exports.reactions_fix = function(reaction) {
@@ -175,20 +188,20 @@ module.exports.reactions_fix = function(reaction) {
     if (reaction.emoji.name !== 'lotus_meditator'
       && reaction.emoji.name !== 'yoga') {
       reaction.remove();
-      }
     }
-    else if (reaction.message.id === '1232327452227932250') {
-      if (reaction.emoji.name !== 'sloth'
-        && reaction.emoji.name !== 'person_in_lotus_position'
-        && reaction.emoji.name !== 'man_bowing'
-        && reaction.emoji.name !== 'date'
-        && reaction.emoji.name !== 'foot'
-        && reaction.emoji.name !== 'leg'
-        && reaction.emoji.name !== 'eggplant') {
+  }
+  else if (reaction.message.id === '1234401819988463646x') {
+    if (reaction.emoji.name !== 'sloth'
+      && reaction.emoji.name !== 'person_in_lotus_position'
+      && reaction.emoji.name !== 'man_bowing'
+      && reaction.emoji.name !== 'date'
+      && reaction.emoji.name !== 'foot'
+      && reaction.emoji.name !== 'leg'
+      && reaction.emoji.name !== 'eggplant') {
         reaction.remove();
       }
     }
-  }
+}
 
 
 

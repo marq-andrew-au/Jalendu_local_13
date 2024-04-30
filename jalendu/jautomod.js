@@ -343,7 +343,7 @@ module.exports.automod = function(message, test = false) {
       role = message.guild.roles.cache.find(rolen => rolen.name === `${pfx}newcomer`);
       message.member.roles.remove(role).catch(err => console.log(err));
 
-      message.delete.catch(err => console.log(err));
+      message.delete().catch(err => console.log(err));
 
       this.welcomeDM(message.author, message.client);
 
