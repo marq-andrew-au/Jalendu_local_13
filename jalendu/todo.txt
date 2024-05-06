@@ -1,17 +1,23 @@
 
+vcmon array of on off times to more acurately handle session and violantiion times.
+
+chatbot invalid regular expressions
+
+
+
 Somehow get the calendar and other http things working
 
 Why doesn't sessions properly delete? - high.
 
-Fix to newcomers function now invalidates the code that fixes other roles - high. 
+Fix to newcomers function now invalidates the code that fixes other roles - high - done.
 
-Fix chatbot db connection - at least don't allow the bot to fail - high
+Fix chatbot db connection - at least don't allow the bot to fail - high - done.
 
-Cleanup still doesn't work properly - depends on learning about callbacks - high
+Cleanup still doesn't work properly - depends on learning about callbacks - high - seems ok now - done.
 
 Change message to depend on automod violation type - high.
 
-Why doesn't moderate verify trigger cleanup ? - bug - this is caused by not considerinig the synchronicity of js? - Need to review functions that need to be run in a particular order.  high.
+Why doesn't moderate verify trigger cleanup ? - bug - this is caused by not considerinig the synchronicity of js? - Need to review functions that need to be run in a particular order.  high. - words now - done
 
 Also make the welcome sent to member introductions prettier. Look at this https://dev.to/en3sis/advanced-discord-js-custom-embeds-using-attachments-2bpn
 high - check if it works on manual verify - high

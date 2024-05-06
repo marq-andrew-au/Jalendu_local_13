@@ -54,10 +54,10 @@ module.exports.welcomeDM = function(member, client, test = false) {
   //memberintro.send(`Please welcome ${member}.`);
 
   const embed = new MessageEmbed()
-    .setColor(0x00ffff)
-    .setThumbnail(member.displayAvatarURL({ format: 'png' }))
-    .addField('\u200B', `Welcome ${member}.`, true)
-    .addField('\u200B', `${member}, when you get a chance, set your <#828724253938942014> so you can see all the channels and review the <#827891914216177685>.`, true);
+  .setColor(0x00ffff)
+  .setThumbnail(member.displayAvatarURL({ format: 'png' }))
+  .addField('\u200B', `Welcome ${member}.`, true)
+  .addField('\u200B', `${member}, when you get a chance, set your <#828724253938942014> so you can see all the channels and review the <#827891914216177685>.`, true);
 
   memberintro.send({ embeds: [embed] });
 }
@@ -342,6 +342,17 @@ module.exports.automod = function(message, test = false) {
       message.member.roles.add(role).catch(err => console.log(err));
       role = message.guild.roles.cache.find(rolen => rolen.name === `${pfx}newcomer`);
       message.member.roles.remove(role).catch(err => console.log(err));
+      role = message.guild.roles.cache.find(rolen => rolen.name === `member`);
+      message.member.roles.add(role).catch(err => console.log(err));
+
+      role = message.guild.roles.cache.find(rolen => rolen.name === `newcomer-muted`);
+      message.member.roles.remove(role).catch(err => console.log(err));
+      role = message.guild.roles.cache.find(rolen => rolen.name === `newcomer-reminded`);
+      message.member.roles.remove(role).catch(err => console.log(err));
+      role = message.guild.roles.cache.find(rolen => rolen.name === `newcomer-spoke`);
+      message.member.roles.remove(role).catch(err => console.log(err));
+      role = message.guild.roles.cache.find(rolen => rolen.name === `newcomer-kicked`);
+      message.member.roles.remove(role).catch(err => console.log(err));
 
       message.delete().catch(err => console.log(err));
 
@@ -356,8 +367,8 @@ module.exports.automod = function(message, test = false) {
     }
 
     message.delete()
-      .then(msgx => console.log(`Deleted message from ${msgx.author.username}`))
-      .catch(err => console.log(err));
+    .then(msgx => console.log(`Deleted message from ${msgx.author.username}`))
+    .catch(err => console.log(err));
 
     //message.author.send(`Please refrain from writing homophobic or racist language, profanity and from including URLs or file links in the Gay Men Meditating ${message.channel.name}.\nYour message containing ${automod.type} was deleted.`).catch(err => console.log(err));
 
@@ -381,18 +392,18 @@ module.exports.automod = function(message, test = false) {
           messages = JSON.parse(fileContent);
 
           message.author.send(messages.muted.content)
-            .catch(err => console.log(err));
+          .catch(err => console.log(err));
 
           if (automod.type === 'homophobic language') {
             const embed = new MessageEmbed()
-              .setColor(0x00ffff)
-              .addField('\u200B', `[Click here for more information!](https://jalendu.marqandrew.repl.co/ga?id=${message.author.id}&tag=${message.author.tag})`);
+            .setColor(0x00ffff)
+            .addField('\u200B', `[Click here for more information!](https://jalendu.marqandrew.repl.co/ga?id=${message.author.id}&tag=${message.author.tag})`);
 
             message.author.send({ embeds: [embed] });
           }
 
           message.author.send(messages.muted_end.content)
-            .catch(err => console.log(err));
+          .catch(err => console.log(err));
 
           mods.send(`${message.author} has been muted.`).catch(err => console.log(err));
 
@@ -483,10 +494,10 @@ module.exports.message_cleanup = async function(client, output) {
           const heartbeat = '<:heart_rainbow_flag:880767689017155635> ' + now.toISOString();
 
           const info = new MessageEmbed()
-            .setColor(12320813)
-            .setTitle('Gay+ Men Meditating')
-            .setDescription(`Verified members: ${verified}, Online: ${online}\nUnverified members: ${unverified}, Online: ${unverifiedol}\nModerators online: ${mods}\n \n${heartbeat}`)
-            .setThumbnail(message.guild.iconURL({ dynamic: true }));
+          .setColor(12320813)
+          .setTitle('Gay+ Men Meditating')
+          .setDescription(`Verified members: ${verified}, Online: ${online}\nUnverified members: ${unverified}, Online: ${unverifiedol}\nModerators online: ${mods}\n \n${heartbeat}`)
+          .setThumbnail(message.guild.iconURL({ dynamic: true }));
 
           message.edit({ embeds: [info] });
         }
@@ -527,10 +538,10 @@ module.exports.message_cleanup = async function(client, output) {
                   cleanup_log = cleanup_log + '\n- - mentions an unverified newcomer - wait.';
                 }
               })
-                .catch(err => {
-                  cleanup_log = cleanup_log + '\n- - mentions an non-member - delete.';
-                  message.delete().catch(err => console.log(err));
-                });
+              .catch(err => {
+                cleanup_log = cleanup_log + '\n- - mentions an non-member - delete.';
+                message.delete().catch(err => console.log(err));
+              });
             }
           }
           else if (member.roles.cache.some(rolen => rolen.name === 'verified')) {
@@ -545,29 +556,29 @@ module.exports.message_cleanup = async function(client, output) {
             cleanup_log = cleanup_log + '\n- is from an unverified newcomer - wait.';
           }
         })
-          .catch(err => {
-            cleanup_log = cleanup_log + '\n- is from a non-member - delete.';
-            message.delete().catch(err => console.log(err));
-          });
+        .catch(err => {
+          cleanup_log = cleanup_log + '\n- is from a non-member - delete.';
+          message.delete().catch(err => console.log(err));
+        });
       }
     });
-  });
+});
 
   //console.log(cleanup_log);
 
-  if (cleanup_log) {
-    cleanup_log = '__Landing zone message cleanup__' + cleanup_log;
-  }
-  else {
-    cleanup_log = 'cleanup: no messages found';
-  }
+if (cleanup_log) {
+  cleanup_log = '__Landing zone message cleanup__' + cleanup_log;
+}
+else {
+  cleanup_log = 'cleanup: no messages found';
+}
 
-  if (!output) {
+if (!output) {
     //console.log(cleanup_log);
-  }
-  else {
-    output.send(cleanup_log);
-  }
+}
+else {
+  output.send(cleanup_log);
+}
 }
 
 
@@ -777,184 +788,184 @@ module.exports.monitoring = function(message) {
   }
 
   db.get('monitors')
-    .then(value => {
-      this.monitors = JSON.parse(value, reviver);
+  .then(value => {
+    this.monitors = JSON.parse(value, reviver);
 
-      if (message.channel.id === '1079913414236852254') {
-        let command = message.content.split(' ')[0].toLowerCase();
+    if (message.channel.id === '1079913414236852254') {
+      let command = message.content.split(' ')[0].toLowerCase();
 
-        if (command === 'add') {
-          let mention = message.mentions.users.first();
+      if (command === 'add') {
+        let mention = message.mentions.users.first();
 
-          if (!mention) {
+        if (!mention) {
+          if (!message.author.bot) {
+            message.reply('You have to mention someone');
+          }
+        }
+        else {
+          if (this.monitors[mention.id]) {
             if (!message.author.bot) {
-              message.reply('You have to mention someone');
+              message.reply(`<@${mention}> was already being monitored`);
             }
           }
           else {
-            if (this.monitors[mention.id]) {
-              if (!message.author.bot) {
-                message.reply(`<@${mention}> was already being monitored`);
-              }
-            }
-            else {
-              const user = new Object();
-              user.name = mention.username;
-              user.added_time = Date.now();
-              this.monitors[mention.id] = user;
-              if (!message.author.bot) {
-                message.reply(`<@${mention}> is now being monitored`);
-              }
-            }
-          }
-        }
-        else if (command === 'del') {
-          let mention = message.mentions.users.first();
-
-          if (!mention) {
+            const user = new Object();
+            user.name = mention.username;
+            user.added_time = Date.now();
+            this.monitors[mention.id] = user;
             if (!message.author.bot) {
-              message.reply('You have to mention someone');
+              message.reply(`<@${mention}> is now being monitored`);
+            }
+          }
+        }
+      }
+      else if (command === 'del') {
+        let mention = message.mentions.users.first();
+
+        if (!mention) {
+          if (!message.author.bot) {
+            message.reply('You have to mention someone');
+          }
+        }
+        else {
+          if (this.monitors[mention.id]) {
+            delete this.monitors[mention.id];
+            if (!message.author.bot) {
+              message.reply(`${mention} was deleted from monitoring`);
             }
           }
           else {
-            if (this.monitors[mention.id]) {
-              delete this.monitors[mention.id];
-              if (!message.author.bot) {
-                message.reply(`${mention} was deleted from monitoring`);
-              }
-            }
-            else {
-              if (!message.author.bot) {
-                message.reply(`<@${mention}> was't being monitored`);
-              }
+            if (!message.author.bot) {
+              message.reply(`<@${mention}> was't being monitored`);
             }
           }
         }
-        else if (command === 'list') {
-          let mention = message.mentions.users.first();
+      }
+      else if (command === 'list') {
+        let mention = message.mentions.users.first();
 
-          if (!mention) {
-            if (!message.content.split(' ')[1] || message.content.split(' ')[1].toLowerCase() === 'all') {
-              if (!message.author.bot) {
-                message.reply('Listed to the console.');
-                console.log(JSON.stringify(this.monitors, null, 2));
-              }
-            }
-            else {
-              if (!message.author.bot) {
-                message.reply('You have to mention someone or list all or just list');
-              }
+        if (!mention) {
+          if (!message.content.split(' ')[1] || message.content.split(' ')[1].toLowerCase() === 'all') {
+            if (!message.author.bot) {
+              message.reply('Listed to the console.');
+              console.log(JSON.stringify(this.monitors, null, 2));
             }
           }
           else {
-            if (this.monitors[mention.id]) {
-              if (!message.author.bot) {
-                message.reply(JSON.stringify(this.monitors[mention.id], null, 2));
-              }
-            }
-            else {
-              if (!message.author.bot) {
-                message.reply(`${mention} isn't being monitored`);
-              }
-            }
-          }
-        }
-        else if (command === 'vcr10') {
-          const violation = 1 * message.content.split(' ')[10];
-          if (!isNaN(violation) && violation > 120) {
-            const camid = message.content.split(' ')[1];
-
-            if (!this.monitors[camid]) {
-              const cammer = new Object();
-              cammer.name = message.content.split(' ')[2];
-              cammer.added_time = Date.now();
-              this.monitors[camid] = cammer;
-            }
-
-            this.monitors[camid].vcr10 = (this.monitors[camid].vcr10 || 0) + 1;
-
-            monitor_log.send(`Violation (${this.monitors[camid].vcr10}) <@${camid}>, <#827891914216177685> rule 10.`);
-
-            if (this.monitors[camid].vcr10 === 1) {
-              //sitting_times.send(`Reminder (${this.monitors[camid].vcr10}) <@${camid}>, <#827891914216177685> rule 10. (If you are in the nude meditation or yoga rooms, you must have your camera on, be nude, showing your face, genitals optional.)`);
-              monitor_log.send(`Reminder (${this.monitors[camid].vcr10}) <@${camid}>, <#827891914216177685> rule 10. (If you are in the nude meditation or yoga rooms, you must have your camera on, be nude, showing your face, genitals optional.)`);
-            }
-            else {
-              //sitting_times.send(`Reminder (${this.monitors[camid].vcr10}) <@${camid}>, <#827891914216177685> rule 10.`);
-              monitor_log.send(`Reminder (${this.monitors[camid].vcr10}) <@${camid}>, <#827891914216177685> rule 10.`);
-            }
-          }
-        }
-        else if (command === 'vccam') {
-          mention = message.mentions.users.first();
-          camid = mention.id;
-          if (this.monitors[camid]) {
-            camtime = 1 * message.content.split(' ')[9];
-            if (!isNaN(camtime)) {
-              this.monitors[camid].camtime = (this.monitors[camid].camtime || 0) + camtime;
-              if (camtime > 300 || this.monitors[camid].camtime > 600) {
-                message.reply(`<@${camid}> trusted because of cam use.`);
-                delete this.monitors[camid];
-              }
+            if (!message.author.bot) {
+              message.reply('You have to mention someone or list all or just list');
             }
           }
         }
         else {
-          if (!message.author.bot) { message.reply('Commands are add @username, del @username, list @username|all'); }
+          if (this.monitors[mention.id]) {
+            if (!message.author.bot) {
+              message.reply(JSON.stringify(this.monitors[mention.id], null, 2));
+            }
+          }
+          else {
+            if (!message.author.bot) {
+              message.reply(`${mention} isn't being monitored`);
+            }
+          }
         }
       }
-      else if (this.monitors[message.author.id] && !ignored_channels.includes(message.channel.id)) {
-        const test = this.monitor_test(this.msglc(message));
-        monitor_log.send(`${message.channel.name}: ${message.author}\n${message.content.substring(0, 50)}\n${test.type}:${test.rule}`);
+      else if (command === 'vcr10') {
+        const violation = 1 * message.content.split(' ')[10];
+        if (!isNaN(violation) && violation > 120) {
+          const camid = message.content.split(' ')[1];
 
-        this.monitors[message.author.id][test.type] = (this.monitors[message.author.id][test.type] || 0) + 1;
-
-        if (test.type === 'profanity') {
-          this.monitors[message.author.id].hits = (this.monitors[message.author.id].hits || 0) + 1;
-          this.monitors[message.author.id].profanity_warnings = (this.monitors[message.author.id].profanity_warnings || 0) + 1;
-
-          if (this.monitors[message.author.id].profanity_warnings === 1) {
-            message.reply(`Excuse me ${message.author}, please refrain from profanity (like ${test.rule}) at least until you are more familiar with the ethos of this server.`);
-            monitor_log.send(`${message.author} warned about profanity`);
+          if (!this.monitors[camid]) {
+            const cammer = new Object();
+            cammer.name = message.content.split(' ')[2];
+            cammer.added_time = Date.now();
+            this.monitors[camid] = cammer;
           }
-          else if (this.monitors[message.author.id].profanity_warnings === 2) {
-            message.reply(`I've mentioned this before ${message.author}. Please refrain from profanity (like ${test.rule}) at least until you are more familiar with the ethos of this server. You may get a timeout if it happens again.`);
-            monitor_log.send(`${message.author} warned again about profanity`);
+
+          this.monitors[camid].vcr10 = (this.monitors[camid].vcr10 || 0) + 1;
+
+          monitor_log.send(`Violation (${this.monitors[camid].vcr10}) <@${camid}>, <#827891914216177685> rule 10.`);
+
+          if (this.monitors[camid].vcr10 === 1) {
+              //sitting_times.send(`Reminder (${this.monitors[camid].vcr10}) <@${camid}>, <#827891914216177685> rule 10. (If you are in the nude meditation or yoga rooms, you must have your camera on, be nude, showing your face, genitals optional.)`);
+            monitor_log.send(`Reminder (${this.monitors[camid].vcr10}) <@${camid}>, <#827891914216177685> rule 10. (If you are in the nude meditation or yoga rooms, you must have your camera on, be nude, showing your face, genitals optional.)`);
           }
-          else if (this.monitors[message.author.id].profanity_warnings > 2) {
-            let timeout = this.monitors[message.author.id].profanity_warnings - 2;
-            message.channel.send(`${timeout} hour timeout for ${message.author} for repeated profanity.`);
-            message.member.timeout(timeout * 60 * 60 * 1000)
-              .then(() => { monitor_log.send(`${message.author} ${timeout} hour timeout for repeated profanity`); })
-              .catch(console.log);
-            message.delete();
+          else {
+              //sitting_times.send(`Reminder (${this.monitors[camid].vcr10}) <@${camid}>, <#827891914216177685> rule 10.`);
+            monitor_log.send(`Reminder (${this.monitors[camid].vcr10}) <@${camid}>, <#827891914216177685> rule 10.`);
           }
         }
-        else if (test.type === 'homophobic language' || test.type === 'racist language') {
-          this.monitors[message.author.id].hits = (this.monitors[message.author.id].hits || 0) + 1;
-          message.channel.send(`${message.author}, racist or homophobic language from a new member raises doubts about your intentions here. You have been given a 12 hour timeout for ${test.type} so that the <@&836489212625682462> s can review your message.`);
-          message.member.timeout(12 * 60 * 60 * 1000)
-            .then(() => { monitor_log.send(`${message.author} 12 hour timeout for ${test.type}`); })
-            .catch(console.log);
+      }
+      else if (command === 'vccam') {
+        mention = message.mentions.users.first();
+        camid = mention.id;
+        if (this.monitors[camid]) {
+          camtime = 1 * message.content.split(' ')[9];
+          if (!isNaN(camtime)) {
+            this.monitors[camid].camtime = (this.monitors[camid].camtime || 0) + camtime;
+            if (camtime > 300 || this.monitors[camid].camtime > 600) {
+              message.reply(`<@${camid}> trusted because of cam use.`);
+              delete this.monitors[camid];
+            }
+          }
+        }
+      }
+      else {
+        if (!message.author.bot) { message.reply('Commands are add @username, del @username, list @username|all'); }
+      }
+    }
+    else if (this.monitors[message.author.id] && !ignored_channels.includes(message.channel.id)) {
+      const test = this.monitor_test(this.msglc(message));
+      monitor_log.send(`${message.channel.name}: ${message.author}\n${message.content.substring(0, 50)}\n${test.type}:${test.rule}`);
+
+      this.monitors[message.author.id][test.type] = (this.monitors[message.author.id][test.type] || 0) + 1;
+
+      if (test.type === 'profanity') {
+        this.monitors[message.author.id].hits = (this.monitors[message.author.id].hits || 0) + 1;
+        this.monitors[message.author.id].profanity_warnings = (this.monitors[message.author.id].profanity_warnings || 0) + 1;
+
+        if (this.monitors[message.author.id].profanity_warnings === 1) {
+          message.reply(`Excuse me ${message.author}, please refrain from profanity (like ${test.rule}) at least until you are more familiar with the ethos of this server.`);
+          monitor_log.send(`${message.author} warned about profanity`);
+        }
+        else if (this.monitors[message.author.id].profanity_warnings === 2) {
+          message.reply(`I've mentioned this before ${message.author}. Please refrain from profanity (like ${test.rule}) at least until you are more familiar with the ethos of this server. You may get a timeout if it happens again.`);
+          monitor_log.send(`${message.author} warned again about profanity`);
+        }
+        else if (this.monitors[message.author.id].profanity_warnings > 2) {
+          let timeout = this.monitors[message.author.id].profanity_warnings - 2;
+          message.channel.send(`${timeout} hour timeout for ${message.author} for repeated profanity.`);
+          message.member.timeout(timeout * 60 * 60 * 1000)
+          .then(() => { monitor_log.send(`${message.author} ${timeout} hour timeout for repeated profanity`); })
+          .catch(console.log);
           message.delete();
         }
-        else if (test.type === 'none' || test.type === 'verify') {
-          if ((this.monitors[message.author.id].none || 0) + (this.monitors[message.author.id].verify || 0) - (this.monitors[message.author.id].hits || 0) > 5) {
-            monitor_log.send(`${message.author} was trusted by use ${(this.monitors[message.author.id].none || 0)} + ${(this.monitors[message.author.id].verify || 0)} - ${(this.monitors[message.author.id].hits || 0)} > 5`);
-            delete this.monitors[message.author.id];
-          }
+      }
+      else if (test.type === 'homophobic language' || test.type === 'racist language') {
+        this.monitors[message.author.id].hits = (this.monitors[message.author.id].hits || 0) + 1;
+        message.channel.send(`${message.author}, racist or homophobic language from a new member raises doubts about your intentions here. You have been given a 12 hour timeout for ${test.type} so that the <@&836489212625682462> s can review your message.`);
+        message.member.timeout(12 * 60 * 60 * 1000)
+        .then(() => { monitor_log.send(`${message.author} 12 hour timeout for ${test.type}`); })
+        .catch(console.log);
+        message.delete();
+      }
+      else if (test.type === 'none' || test.type === 'verify') {
+        if ((this.monitors[message.author.id].none || 0) + (this.monitors[message.author.id].verify || 0) - (this.monitors[message.author.id].hits || 0) > 5) {
+          monitor_log.send(`${message.author} was trusted by use ${(this.monitors[message.author.id].none || 0)} + ${(this.monitors[message.author.id].verify || 0)} - ${(this.monitors[message.author.id].hits || 0)} > 5`);
+          delete this.monitors[message.author.id];
         }
       }
+    }
 
 
-      db.set('monitors', JSON.stringify(this.monitors))
-        .then(() => {
-        })
-        .catch(err => {
-          console.log(err);
-        });
+    db.set('monitors', JSON.stringify(this.monitors))
+    .then(() => {
     })
-    .catch(err => { console.log(err) });
+    .catch(err => {
+      console.log(err);
+    });
+  })
+.catch(err => { console.log(err) });
 }
 
 
@@ -965,30 +976,30 @@ module.exports.monitor_maint = function(client) {
   const monitor_log = client.channels.cache.get('1079913414236852254');
 
   db.get('monitors')
-    .then(value => {
-      this.monitors = JSON.parse(value, reviver);
+  .then(value => {
+    this.monitors = JSON.parse(value, reviver);
 
-      let count = 0;
-      for (const id in this.monitors) {
-        const member = guild.members.cache.get(id);
-        count = count + 1;
-        if (!member) {
-          monitor_log.send(`<@${id}> is no longer a member so deleted`);
-          delete this.monitors[id];
-        }
+    let count = 0;
+    for (const id in this.monitors) {
+      const member = guild.members.cache.get(id);
+      count = count + 1;
+      if (!member) {
+        monitor_log.send(`<@${id}> is no longer a member so deleted`);
+        delete this.monitors[id];
       }
+    }
 
-      console.log(filename + `${count} members being monitored.`)
+    console.log(filename + `${count} members being monitored.`)
 
-      db.set('monitors', JSON.stringify(this.monitors))
-        .then(() => {
-        })
-        .catch(err => {
-          console.log(err);
-        });
-
+    db.set('monitors', JSON.stringify(this.monitors))
+    .then(() => {
     })
-    .catch(err => { console.log(err) });
+    .catch(err => {
+      console.log(err);
+    });
+
+  })
+  .catch(err => { console.log(err) });
 }
 
 
@@ -1011,22 +1022,22 @@ module.exports.gate = function(client, reset) {
       const heartbeat = '<:heart_rainbow_flag:880767689017155635> ' + now.toISOString();
 
       const welcomeEmbed = new MessageEmbed()
-        .setColor(0x0099FF)
-        .setTitle('Welcome to Gay+ Men Meditating')
+      .setColor(0x0099FF)
+      .setTitle('Welcome to Gay+ Men Meditating')
 
-        .setAuthor({ name: '\u200B', iconURL: guild.iconURL() })
-        .setDescription("G+MM is a group for gay+ (gay+bi+pan+curious+msm) male identifying adults interested in subjects including meditation, mindfulness, yoga, gay men's spirituality, embodiment, body positivity, spiritual sexuality and more.\n\nYou must be **verified age 18+** to join this group (some channels may have nudity or sex acts).\n\nVerification is handled independantly by the Ripple Verification server (link below). Contact the moderators here if for some good reason you cannot verify through Ripple.\n\nIf you are seeing this channel, you **have NOT been verified**. To know why and what you have to do to get verified, scroll down to a message below.")
-        .addFields(
-          { name: '\u200B', value: '**Server Stats (members/online) - pending**' },
-          { name: 'Verified', value: '0/0', inline: true },
-          { name: 'Unverified', value: '0/0', inline: true },
-          { name: 'Mods', value: '0/0', inline: true },
-          { name: '\u200B', value: `${heartbeat}` },
+      .setAuthor({ name: '\u200B', iconURL: guild.iconURL() })
+      .setDescription("G+MM is a group for gay+ (gay+bi+pan+curious+msm) male identifying adults interested in subjects including meditation, mindfulness, yoga, gay men's spirituality, embodiment, body positivity, spiritual sexuality and more.\n\nYou must be **verified age 18+** to join this group (some channels may have nudity or sex acts).\n\nVerification is handled independantly by the Ripple Verification server (link below). Contact the moderators here if for some good reason you cannot verify through Ripple.\n\nIf you are seeing this channel, you **have NOT been verified**. To know why and what you have to do to get verified, scroll down to a message below.")
+      .addFields(
+        { name: '\u200B', value: '**Server Stats (members/online) - pending**' },
+        { name: 'Verified', value: '0/0', inline: true },
+        { name: 'Unverified', value: '0/0', inline: true },
+        { name: 'Mods', value: '0/0', inline: true },
+        { name: '\u200B', value: `${heartbeat}` },
         );
 
       gate.send({ embeds: [welcomeEmbed] })
-        .then(gate.send('https://discord.gg/GYacNvcAUB'))
-        .catch(console.error);
+      .then(gate.send('https://discord.gg/GYacNvcAUB'))
+      .catch(console.error);
 
       //let newcomers = guild.roles.resolve('851071523543973928').members;
 
@@ -1077,7 +1088,7 @@ module.exports.gate = function(client, reset) {
         newembed.fields[4].value = `${heartbeat}`;
 
         header.edit({ embeds: [newembed] })
-          .catch(console.error);
+        .catch(console.error);
       }
     }
   });
@@ -1098,11 +1109,11 @@ module.exports.av_embed = function(client, member, status) {
 
     if (status) {
       const embed = new MessageEmbed()
-        .setColor(0x00ffff)
-        .setThumbnail(member.user.displayAvatarURL({ format: 'png', size: 512, dynamic: true }))
-        .addFields(
-          { name: `\u200B`, value: `${member} ${status}` },
-          { name: `\u200B`, value: `ID ${member.id}`, inline: true }
+      .setColor(0x00ffff)
+      .setThumbnail(member.user.displayAvatarURL({ format: 'png', size: 512, dynamic: true }))
+      .addFields(
+        { name: `\u200B`, value: `${member} ${status}` },
+        { name: `\u200B`, value: `ID ${member.id}`, inline: true }
         );
 
       gate.send({ embeds: [embed] }).catch(console.error);
@@ -1130,10 +1141,10 @@ module.exports.av = function(client, newmember) {
         memberintro = client.channels.cache.get('833559519611060244');
 
         const embed = new MessageEmbed()
-          .setColor(0x00ffff)
-          .setThumbnail(newmember.displayAvatarURL({ format: 'png' }))
-          .addFields(
-            { name: '\u200B', value: `Welcome ${newmember}.`, inline: true }
+        .setColor(0x00ffff)
+        .setThumbnail(newmember.displayAvatarURL({ format: 'png' }))
+        .addFields(
+          { name: '\u200B', value: `Welcome ${newmember}.`, inline: true }
           );
 
         memberintro.send({ embeds: [embed] });

@@ -172,7 +172,7 @@ jalendu.once('ready', async () => {
     jalendu_code.newcomers(jalendu);
     qotd.ask(jalendu);
     jautomod.monitor_maint(jalendu);
-    jalendu_code.roles_fix(jalendu);
+    //jalendu_code.roles_fix(jalendu);
   }, checkthe_interval);
 
 

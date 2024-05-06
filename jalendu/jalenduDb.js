@@ -40,11 +40,24 @@ module.exports.setup = function() {
     .catch(err => { console.error(err); })
     ;
 
+  // sql = 'ALTER TABLE users ADD newcomer BOOLEAN;';
+
+  // jalendu.query(sql)
+  //   .catch(err => { console.error(err); })
+  //   ;
+
+  // sql = 'ALTER TABLE users ADD verified BOOLEAN;';
+
+  // jalendu.query(sql)
+  //   .catch(err => { console.error(err); })
+  //   ;
+
+
   return jalendu;
 }
 
 
-module.exports.message = function(jalendu, message) {
+module.exports.message = function(client,jalendu, message) {
 
   var msglc = message.content.trim().toLowerCase().replace(/<[@#!&](.*?)>/g, '');
 
@@ -53,6 +66,15 @@ module.exports.message = function(jalendu, message) {
   }
 
   const username = message.author.username;
+
+  const guild = client.guilds.cache.get('827888294100074516');
+
+  const member = guild.members.cache.get(message.author.id);
+
+  const newcomer  = member.roles.cache.has('851071523543973928');
+  const verified  = member.roles.cache.has('836590097318019092');
+
+  console.log(newcomer + ' ' + verified);
 
   const d = new Date();
 
@@ -78,7 +100,7 @@ module.exports.message = function(jalendu, message) {
     }
     else {
       sql = 'insert into users (username, contexts, blocked, updated) ' +
-        `values ('${username}', '${JSON.stringify(contexts)}' ,'${blocked}', to_timestamp(${Date.now()} / 1000.0));`;
+        `values ('${username}', '${JSON.stringify(contexts)}' ,'${blocked}', to_timestamp(${Date.now()} / 1000.0), '${newcomer}', '${verified}');`;
       jalendu.query(sql, function(error) {
         if (error) { console.log(error); }
       });
@@ -116,17 +138,18 @@ module.exports.message = function(jalendu, message) {
           if (error) { console.log(error); }
           else if (results.rowCount > 0) {
             let index = 0;
-            // if(results.rowCount > 1) {
-            // 	console.log('Warning: intent matches more than one reply.');
-            // 	index = Math.floor(Math.random() * (results.rowCount - 1));
-            // }
+            if(results.rowCount > 1) {
+            	console.log('Warning: intent matches more than one reply.');
+            	index = Math.floor(Math.random() * (results.rowCount - 1));
+            }
 
             let reply = results.rows[index].reply;
             reply = reply.replace('${username}', `${message.author}`);
             reply = reply.replace('${time}', `${time}`);
             reply = reply.replace('${UTC}', `${UTC}`);
+            reply = reply.replace('${tag}', `${message.author.tag}`);
 
-            message.channel.send(reply);
+            message.channel.send(reply).catch(err => { console.error(err); });
             context_out = results.rows[index].context_out;
 
             if (context_out === 'blocked') {
@@ -145,7 +168,7 @@ module.exports.message = function(jalendu, message) {
             }
 
             sql = `update users set contexts = '${JSON.stringify(contexts)}', ` +
-              `blocked = '${blocked}', updated = to_timestamp(${Date.now()} / 1000.0) where username = '${username}';`;
+              `blocked = '${blocked}', updated = to_timestamp(${Date.now()} / 1000.0), newcomer = '${newcomer}', verified = '${verified}' where username = '${username}';`;
             jalendu.query(sql, function(error) {
               if (error) { console.log(error); }
             });
@@ -258,10 +281,10 @@ module.exports.commands = function(jalendu, message) {
     sql = `select * from ${args[2]};`;
     jalendu.query(sql, function(error, results) {
       if (error) {
-        message.reply(error);
+        message.reply(error).catch(err => { console.error(err); });
       }
       else {
-        message.reply(tabulate(results));
+        message.reply(tabulate(results)).catch(err => { console.error(err); });
       }
     });
   }
@@ -269,11 +292,11 @@ module.exports.commands = function(jalendu, message) {
     sql = `select tablename from pg_catalog.pg_tables where schemaname = 'public'`;
     jalendu.query(sql, function(error, results) {
       if (error) {
-        message.reply(error);
+        message.reply(error).catch(err => { console.error(err); });
       }
       else {
         //console.log(results);
-        message.reply(tabulate(results));
+        message.reply(tabulate(results)).catch(err => { console.error(err); });
       }
     });
   }
@@ -281,11 +304,11 @@ module.exports.commands = function(jalendu, message) {
     sql = `insert into intents (intent,expression) values ('${args[2]}','${args.slice(3).join(' ')}')`;
     jalendu.query(sql, function(error, results) {
       if (error) {
-        message.reply(error);
+        message.reply(error).catch(err => { console.error(err); });
       }
       else {
         //console.log(results);
-        message.reply(tabulate(results));
+        message.reply(tabulate(results)).catch(err => { console.error(err); });
       }
     });
   }
@@ -293,16 +316,16 @@ module.exports.commands = function(jalendu, message) {
     sql = args.slice(2).join(' ');
     jalendu.query(sql, function(error, results) {
       if (error) {
-        message.reply(error);
+        message.reply(error).catch(err => { console.error(err); });
       }
       else {
         if (results.command === 'SELECT') {
           //console.log(results);
-          message.reply(tabulate(results));
+          message.reply(tabulate(results)).catch(err => { console.error(err); });
         }
         else {
           console.log(results);
-          //message.reply(`${results.rowCount} rows affected`);
+          //message.reply(`${results.rowCount} rows affected`).catch(err => { console.error(err); });
         }
       }
     });

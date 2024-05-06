@@ -1,5 +1,6 @@
 
-const { Client, Intents, MessageEmbed } = require('discord.js');
+const { Client, Intents, MessageEmbed, MessageAttachment } = require('discord.js');
+
 
 const fs = require('fs');
 
@@ -16,6 +17,8 @@ var qotd = require('./qotd.js');
 var jalenduDb = require('./jalenduDb.js');
 
 const jalenducb = jalenduDb.setup();
+
+var selfie = require('./selfie.js');
 
 module.exports.ready = function(client) {
   console.log(`Logged in as: ${client.user.tag}`);
@@ -263,6 +266,18 @@ module.exports.interactionCreate = async function(client, interaction) {
             member.roles.add(role);
             role = interaction.guild.roles.cache.find(rolen => rolen.name === `${test}newcomer`);
             member.roles.remove(role);
+            role = interaction.guild.roles.cache.find(rolen => rolen.name === `member`);
+            member.roles.add(role);
+
+            role = interaction.guild.roles.cache.find(rolen => rolen.name === `${test}newcomer-muted`);
+            member.roles.remove(role);
+            role = interaction.guild.roles.cache.find(rolen => rolen.name === `newcomer-reminded`);
+            member.roles.remove(role);
+            role = interaction.guild.roles.cache.find(rolen => rolen.name === `newcomer-spoke`);
+            member.roles.remove(role);
+            role = interaction.guild.roles.cache.find(rolen => rolen.name === `newcomer-kicked`);
+            member.roles.remove(role);
+
 
             interaction.reply({ content: `Member ${username} has been verified. :partying_face:`, ephemeral: true })
               .catch((err) => console.log(err));
@@ -509,7 +524,7 @@ module.exports.interactionCreate = async function(client, interaction) {
 
 module.exports.messageCreate = async function(client, message) {
 
-  console.log(message.channel.type + ' : ' + message.channel.name);
+  console.log(message.channel.type + ' : ' + message.channel.name + ' : ' + message.channel.id);
 
   if (message.embeds[0]) {
     console.log(message.author.username + ': ');
@@ -522,6 +537,22 @@ module.exports.messageCreate = async function(client, message) {
   if (message.author.bot && message.type === 'CHANNEL_PINNED_MESSAGE') {
     message.delete();
   }
+
+
+  const selfie_channels = ['881620652417769473','827891462535905290','871627629831290920'];
+
+  if (message.attachments) {
+    if (message.channel.type === 'DM' || selfie_channels.includes(message.channel.id)) {
+      selfie.download(message, function (err) {
+       if (err) {
+         console.log(err);
+       } else {
+         console.log("done");
+       }
+     });
+    }
+  }
+
 
   let member, moderator, dm, channel_name, admin, channelid;
 
@@ -697,6 +728,10 @@ module.exports.messageCreate = async function(client, message) {
 
       message.author.send({ embeds: [embed] });
     }
+    else if (admin && content.startsWith('selfiescan')) {
+      selfie.selfiescan(client,message.channel.id);
+      message.delete();
+    }
     else if (moderator && content.startsWith('selfie')) {
       if (message.mentions.users.size > 0) {
 
@@ -751,17 +786,17 @@ module.exports.messageCreate = async function(client, message) {
       jautomod.data(message);
     }
     else if (content.startsWith('chatbot') || content.startsWith('cb')) {
-      jalenduDb.commands(jalenducb, message);
+      jalenduDb.commands(client,jalenducb, message);
     }
   }
   else if (dm) {
-    jalenduDb.message(jalenducb, message);
+    jalenduDb.message(client,jalenducb, message);
     //exif.exifdata(message);
   }
   else if (message.mentions) {
     if (message.mentions.members.first()) {
       if (message.mentions.members.first().user.username === 'Jalendu') {
-        jalenduDb.message(jalenducb, message);
+        jalenduDb.message(client,jalenducb, message);
       }
     }
   }
