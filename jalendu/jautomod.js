@@ -289,10 +289,13 @@ module.exports.monitor_test = function(msglc) {
   return result;
 }
 
+
+
+
 module.exports.automod = function(message, test = false) {
 
   if (!message.content || message.author.bot) {
-    return;
+    return {type:"none",rule:"none",selfie:"not-required"};
   }
 
   let mods;
@@ -319,13 +322,21 @@ module.exports.automod = function(message, test = false) {
 
     const automod = this.test(this.msglc(message));
 
+    if ((Date.now() - message.author.createdAt) / (24 * 60 * 60 * 1000) < 56) {
+      automod.selfie = "required"
+    }
+    else {
+      automod.selfie = "not-required";
+    }
+
+
     dels.send(`**${message.author} wrote:**`).catch(err => console.log(err));
     dels.send(`${message.content}`).catch(err => console.log(err));
 
     dels.send(`**Jalendu automod classified this as type "${automod.type}" by rule "${automod.rule}"**`);
 
     if (automod.type === 'none') {
-      return;
+      return automod;
     }
 
     if (automod.type === 'verify') {
@@ -335,7 +346,7 @@ module.exports.automod = function(message, test = false) {
       if ((Date.now() - message.author.createdAt) / (24 * 60 * 60 * 1000) < 56) {
         dels.send(`${message.author} was not auto-verified because the account is less than 56 days old.`).catch(err => console.log(err));
         message.author.send(`Thankyou for your message in Gay+ Men Meditating. You would have been verified automatically however our group has been seriously attacked recently so we no longer automatically verify relatively new Discord accounts. Please send a selfie holding a paper on which is written your Discord ID to <@679465390841135126> or <@365725452809011211> if you still want to join.`).catch(err => console.log(err));
-        return;
+        return automod;      
       }
 
       let role = message.guild.roles.cache.find(rolen => rolen.name === `${pfx}verified`);
@@ -363,7 +374,11 @@ module.exports.automod = function(message, test = false) {
 
       dels.send(`**${message.author} was verified and their message was deleted.**`).catch(err => console.log(err));
 
-      return;
+      return automod;
+    }
+
+    if (message.channel.type === 'DM') {
+      return automod;
     }
 
     message.delete()
@@ -426,6 +441,7 @@ module.exports.automod = function(message, test = false) {
     console.log(this.scumbags);
     console.log(this.warnings);
   }
+  return {type:"none",rule:"none",selfie:"not-required"};
 }
 
 

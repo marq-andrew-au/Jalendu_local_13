@@ -1,6 +1,8 @@
 const pg = require('pg');
 const table = require('text-table');
 
+var jautomod = require('./jautomod.js');
+
 module.exports.setup = function() {
 
   const arpquuxb = process.env['arpquuxb'];
@@ -34,7 +36,7 @@ module.exports.setup = function() {
     ;
 
   sql = 'create table if not exists users ' +
-    '(username varchar, contexts varchar, blocked varchar, updated timestamptz);';
+    '(username varchar, contexts varchar, blocked varchar, updated timestamptz, botintro boolean);';
 
   jalendu.query(sql)
     .catch(err => { console.error(err); })
@@ -57,7 +59,8 @@ module.exports.setup = function() {
 }
 
 
-module.exports.message = function(client,jalendu, message) {
+
+module.exports.message = function(client, jalendu, message) {
 
   var msglc = message.content.trim().toLowerCase().replace(/<[@#!&](.*?)>/g, '');
 
@@ -65,16 +68,29 @@ module.exports.message = function(client,jalendu, message) {
     return;
   }
 
+
+  const automod = jautomod.test(jautomod.msglc(message));
+
+  if ((Date.now() - message.author.createdAt) / (24 * 60 * 60 * 1000) < 56) {
+    automod.selfie = "required"
+  }
+  else {
+    automod.selfie = "not-required";
+  }
+
+
+  console.log(JSON.stringify(automod, null, 2));
+
   const username = message.author.username;
 
   const guild = client.guilds.cache.get('827888294100074516');
 
   const member = guild.members.cache.get(message.author.id);
 
-  const newcomer  = member.roles.cache.has('851071523543973928');
-  const verified  = member.roles.cache.has('836590097318019092');
+  const newcomer = member.roles.cache.has('851071523543973928'); 
+  const verified = member.roles.cache.has('836590097318019092');
 
-  console.log(newcomer + ' ' + verified);
+  console.log(`newcomer ${newcomer}`);
 
   const d = new Date();
 
@@ -89,6 +105,8 @@ module.exports.message = function(client,jalendu, message) {
 
   let updated = new Date();
 
+  let botintro = false;
+
   sql = `select * from users where username = '${username}';`;
 
   jalendu.query(sql, function(error, results) {
@@ -97,10 +115,11 @@ module.exports.message = function(client,jalendu, message) {
       contexts = JSON.parse(results.rows[0].contexts);
       blocked = results.rows[0].blocked;
       updated = new Date(results.rows[0].updated);
+      botintro = new Date(results.rows[0].botintro);
     }
     else {
-      sql = 'insert into users (username, contexts, blocked, updated) ' +
-        `values ('${username}', '${JSON.stringify(contexts)}' ,'${blocked}', to_timestamp(${Date.now()} / 1000.0), '${newcomer}', '${verified}');`;
+      sql = 'insert into users (username, contexts, blocked, updated, botintro) ' +
+        `values ('${username}', '${JSON.stringify(contexts)}' ,'${blocked}', to_timestamp(${Date.now()} / 1000.0), false);`;
       jalendu.query(sql, function(error) {
         if (error) { console.log(error); }
       });
@@ -113,6 +132,34 @@ module.exports.message = function(client,jalendu, message) {
       else {
         return;
       }
+    }
+
+
+    let reply = '';
+
+
+    console.log(`newcomer ${newcomer}`);
+
+
+    if(!verified){
+      role = guild.roles.cache.find(rolen => rolen.name === `newcomer`);
+      member.roles.add(role).catch(err => console.log(err));
+      message.author.send('Sorry something went wrong. You now should have the newcomer role so you can see <#851056727419256902>').catch(err => console.log(err));
+    }
+
+    if(!botintro){
+      botintro = true;
+      reply = "Hi. I am a bot. My name is Jalendu. Enter /readme to read information and commands. +"
+      "You can also enter other questions and I will do my best to reply."
+      if (newcomer) {
+        reply = reply + "\nYou are a newcomer to Gay+ Men Meditating. That means that you don't have full access to the server until +"
+        "you are verified. Please go to <#851056727419256902> and follow the instructions there.";
+        if(automod.selfie === 'required'){
+          reply = reply + "\nYou are a newcomer to Gay+ Men Meditating. That means that you don't have full access to the server until +"
+          "you are verified. Please go to <#851056727419256902> and follow the instructions there.";
+        }
+      }
+      message.author.send(reply).catch(err => console.log(err));
     }
 
     let context = contexts[contexts.length - 1];
@@ -168,7 +215,7 @@ module.exports.message = function(client,jalendu, message) {
             }
 
             sql = `update users set contexts = '${JSON.stringify(contexts)}', ` +
-              `blocked = '${blocked}', updated = to_timestamp(${Date.now()} / 1000.0), newcomer = '${newcomer}', verified = '${verified}' where username = '${username}';`;
+              `blocked = '${blocked}', updated = to_timestamp(${Date.now()} / 1000.0), botintro = ${botintro} where username = '${username}';`;
             jalendu.query(sql, function(error) {
               if (error) { console.log(error); }
             });
@@ -179,7 +226,7 @@ module.exports.message = function(client,jalendu, message) {
         });
       }
       else {
-        message.channel.send('Sorry, I don\'t understand what you are saying. I\'m just learning.');
+        message.channel.send('Sorry, I don\'t understand what you are saying. I\'m just learning. (I\'m a bot.)');
 
         sql = `select * from dms where dm = '${msglc}';`;
 

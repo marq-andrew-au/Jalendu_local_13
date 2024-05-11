@@ -5,3 +5,5 @@ db/db*
 zzz*
 node_modules/
 logs/
+selfies/
+*.log

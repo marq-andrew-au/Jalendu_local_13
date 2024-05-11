@@ -1,7 +1,7 @@
 {
   "active": true,
   "channelid": "900243601303420988",
-  "lastasktime": "2024-05-04T09:51:32.949Z",
+  "lastasktime": "2024-05-11T10:42:24.960Z",
   "intervaldays": 7,
   "maxasked": 2,
   "nextid": 101,
@@ -795,13 +795,14 @@
     {
       "id": 76,
       "question": "When is war justifiable?",
-      "asked": 0,
+      "asked": 2,
       "replies": 0,
       "addedby": "marq_andrew",
       "status": "approved",
       "reviewedby": "marq_andrew",
-      "askedtime": null,
-      "random": 0.6699111480062272
+      "askedtime": "2024-05-11T10:42:24.960Z",
+      "random": 0.6699111480062272,
+      "messageid": "1238803395251277915"
     },
     {
       "id": 60,

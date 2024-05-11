@@ -802,10 +802,10 @@ module.exports.messageCreate = async function(client, message) {
   }
 
   if (channel_name === 'landing-zone') {
-    jautomod.automod(message);
+    console.log(JSON.stringify(jautomod.automod(message),null,2));
   }
   else if (channel_name === 'test_landing-zone') {
-    jautomod.automod(message, true);
+    console.log(JSON.stringify(jautomod.automod(message, true),null,2));
   }
   else {
     jautomod.monitoring(message);
