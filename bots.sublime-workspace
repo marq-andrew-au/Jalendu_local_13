@@ -14,10 +14,7 @@
 				"buffer_size": 39983,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
-			},
-			"undo_stack":
-			[
-			]
+			}
 		}
 	],
 	"build_system": "",

@@ -2640,5 +2640,33 @@
     "author": "824590241922023445",
     "status": "active",
     "index": 87
+  },
+  {
+    "question": "Is criticism of Israel anti-semitic?",
+    "spectra": [
+      "racist - unprejudiced",
+      "fascist - anti-fascist",
+      "post-truth - pro-truth"
+    ],
+    "answers": [
+      {
+        "answer": "Yes",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "No",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "824590241922023445",
+    "status": "active",
+    "index": 88
   }
 ]

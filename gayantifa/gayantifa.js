@@ -143,8 +143,10 @@ module.exports.cleanup = async function(client) {
     }
   }
 
-
 }
+
+let prev_message = '';
+let repeats = 0;
 
 
 module.exports.messageCreate = async function(client, message) {
@@ -214,6 +216,18 @@ module.exports.messageCreate = async function(client, message) {
     }
     else {
       this.demote(message);
+
+      if(prev_message.length > 100 && prev_message === message.content){
+        message.delete().catch(err => console.log(filename + err));
+        repeats = repeats + 1;
+
+        if(repeats > 5){
+          message.member.timeout(120 * 60 * 1000).catch(err => console.log(filename + err));
+        }
+      }
+      else {
+        repeats = 0;
+      }
     }
   }
   else if (message.content.startsWith("!ga")) { //foreign guild
@@ -223,6 +237,8 @@ module.exports.messageCreate = async function(client, message) {
   if (!message.author.bot && message.channel.type !== 'DM') {
     //dossiers.dossier_messages(client, message);
   }
+
+  prev_message = message.content;
 };
 
 
@@ -339,6 +355,11 @@ module.exports.ga_commands = function(client, message, guildtype) {
     });
   }
   else if (admin && command[1] === 'demote' && guildtype !== 'dm') {
+    if (message.mentions.members){
+
+    }
+  }
+  else if (admin && command[1] === 'trap' && guildtype !== 'dm') {
     if (message.mentions.members){
 
     }

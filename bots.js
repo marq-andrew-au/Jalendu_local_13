@@ -178,6 +178,7 @@ jalendu.once('ready', async () => {
 
   jautomod.message_cleanup(jalendu);
   jautomod.gate(jalendu, false);
+  fs.writeFileSync('./logs/heartbeat.log', common_code.ts() + '\n');
 
   checkminutes = 1;
   checkthe_interval = checkminutes * 60 * 1000;
@@ -186,6 +187,7 @@ jalendu.once('ready', async () => {
     jautomod.message_cleanup(jalendu);
     jautomod.gate(jalendu, false);
     db.filesave();
+    fs.writeFileSync('./logs/heartbeat.log', common_code.ts() + '\n');
   }, checkthe_interval);
 
 
@@ -215,6 +217,7 @@ gayantifa.on('ready', () => {
 
   setInterval(function() {
     gayantifa_code.cleanup(gayantifa);
+    //fs.appendFileSync('./logs/heartbeat_gayantifa.log',common_code.ts() + '\n');
   }, checkthe_interval);
 
   gayantifa_code.demote_code(gayantifa);
