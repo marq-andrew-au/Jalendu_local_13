@@ -11,7 +11,7 @@
 			"file": "jalendu/jautomod.js",
 			"settings":
 			{
-				"buffer_size": 39983,
+				"buffer_size": 40487,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -104,14 +104,14 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 39983,
+						"buffer_size": 40487,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								25,
+								0,
 								0
 							]
 						],

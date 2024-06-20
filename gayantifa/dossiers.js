@@ -81,6 +81,19 @@ module.exports.dossier = function(client, member, event, reason = 'Unknown') {
         dossier[member.guild.id].reason = new Array();
       }
 
+      if (!Array.isArray(dossier[member.guild.id].joined)) {
+        dossier[member.guild.id].joined = new Array();
+      }
+      if (!Array.isArray(dossier[member.guild.id].joined)) {
+        dossier[member.guild.id].left = new Array();
+      }
+      if (!Array.isArray(dossier[member.guild.id].joined)) {
+        dossier[member.guild.id].presence = new Array();
+      }
+      if (!Array.isArray(dossier[member.guild.id].joined)) {
+        dossier[member.guild.id].reason = new Array();
+      }
+
       if (event === 'joined') {
         dossier[member.guild.id].joined.unshift(new Date());
         dossier[member.guild.id].left.unshift(null);
@@ -105,6 +118,7 @@ module.exports.dossier = function(client, member, event, reason = 'Unknown') {
           dossier[member.guild.id].presence[0] = 'present';
         }
         else if (dossier[member.guild.id].presence[0] !== 'present') {
+
           dossier[member.guild.id].joined.unshift(member.joinedAt);
           dossier[member.guild.id].left.unshift(null);
           dossier[member.guild.id].presence.unshift('present');

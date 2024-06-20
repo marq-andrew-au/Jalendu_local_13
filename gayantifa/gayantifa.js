@@ -2,6 +2,8 @@ const { Client, Intents, MessageEmbed } = require('discord.js');
 
 const db = require('../common/text_database.js');
 
+const antispam = require('../common/antispam.js');
+
 var quiz = require('./quiz.js');
 
 var dossiers = require('./dossiers.js');
@@ -59,13 +61,13 @@ module.exports.demote = async function(message) {
       else {
         await message.reply(`${message.author} wrote ${test.type} ("${test.rule}"). They are timed-out for ${timeout} minutes and their verification level will be reduced.`).catch(err => console.log(filename + err));
         await message.member.timeout(timeout * 60 * 1000).catch(err => console.log(filename + err));
-        await message.member.roles.add("1117046096569565255").catch(err => console.log(filename + err));
-        await message.member.roles.add("1183348471898578996").catch(err => console.log(filename + err));
+        await message.member.roles.add("1117046096569565255").catch(err => console.log(filename + err)); // demote
+        //await message.member.roles.add("1183348471898578996").catch(err => console.log(filename + err)); // immune
         message.delete().catch(err => console.log(filename + err));
       }
     }
   }
-}
+} 
 
 
 module.exports.demote_code = function(client) {
@@ -75,9 +77,21 @@ module.exports.demote_code = function(client) {
 
   for (const member of pending) {
     console.log(filename + `${member[1].user.username} demoted`);
-    member[1].roles.remove("1117046096569565255").catch(err => console.log(filename + err));
-    member[1].roles.remove("1086897285461463050").catch(err => console.log(filename + err));
-    member[1].roles.add("1086896507686494238").catch(err => console.log(filename + err));
+    member[1].roles.remove("1117046096569565255").catch(err => console.log(filename + err)); // demote
+    member[1].roles.remove("1086897285461463050").catch(err => console.log(filename + err)); // verified 1
+    member[1].roles.remove("1228724705976913961").catch(err => console.log(filename + err)); // gater
+    member[1].roles.add("1086896507686494238").catch(err => console.log(filename + err));    // unverified
+
+    examp = quiz.examp_init(member[1].id);
+
+    if(!member[1].roles.cache.has('1183348471898578996')){
+      examp.average_limit = 2.5;
+    }
+    else {
+      examp.average_limit = Math.min(5,examp.average_limit + 0.5);
+    }
+
+    db.db.save = true;
   }
 }
 
@@ -150,6 +164,8 @@ let repeats = 0;
 
 
 module.exports.messageCreate = async function(client, message) {
+  //antispam.spam(message);
+
   if (message.author.bot) {
     if (message.channel.type !== 'DM' && message.channel.name.startsWith('exam-')) {
     }
@@ -242,7 +258,7 @@ module.exports.messageCreate = async function(client, message) {
 };
 
 
-module.exports.ga_commands = function(client, message, guildtype) {
+module.exports.ga_commands = function(client, message, guildtype){
   let command = message.content.split(" ")[0].split("-");
   let parms = message.content.split(" ").slice(1);
 
@@ -354,15 +370,29 @@ module.exports.ga_commands = function(client, message, guildtype) {
       }
     });
   }
-  else if (admin && command[1] === 'demote' && guildtype !== 'dm') {
-    if (message.mentions.members){
-
-    }
+  else if (admin && command[1] === 'demote' && guildtype !== 'dm' && message.mentions.members) {
+    message.mentions.members.first().roles.add('1117046096569565255');
+    // examp = quiz.examp_init(message.mentions.members.first().id);
+    // if(!message.mentions.members.first().cache.has('1183348471898578996')){
+    //   examp.average_limit = 2.5;
+    // }
+    // else {
+    //   examp.average_limit = Math.max(5,examp.average_limit + 0.5);
+    // }
+    // db.db.save = true;
+    message.delete().catch(err => console.log(filename + err));
   }
-  else if (admin && command[1] === 'trap' && guildtype !== 'dm') {
-    if (message.mentions.members){
-
-    }
+  else if (admin && command[1] === 'trap' && guildtype !== 'dm' && message.mentions.members) {
+    examp = quiz.examp_init(message.mentions.members.first().id);
+    examp.average_limit = 5.1;
+    db.db.save = true;
+    message.delete().catch(err => console.log(filename + err));
+  }
+  else if (admin && command[1] === 'untrap' && guildtype !== 'dm' && message.mentions.members){
+    examp = quiz.examp_init(message.mentions.members.first().id);
+    examp.average_limit = 2.5;
+    db.db.save = true;
+    message.delete().catch(err => console.log(filename + err));
   }
   else {
     message.reply("Unknown bot command").catch(console.error);

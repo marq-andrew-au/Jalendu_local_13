@@ -1,4 +1,3 @@
-//const Database = require("@replit/database");
 
 const { MessageEmbed } = require('discord.js');
 
@@ -9,8 +8,6 @@ var automod = require('../jalendu/jautomod.js');
 var dossiers = require('./dossiers.js');
 
 var guilds = require('./guilds.js');
-
-//const db = new Database();
 
 const db = require('../common/text_database.js');
 
@@ -179,9 +176,42 @@ module.exports.qarray = function() {
 }
 
 
+ module.exports.avg = function(penalties, positives, negatives, zeros, score) {
+
+  questions = penalties + positives + negatives + zeros;
+
+  if(questions === 0){ 
+    return 0
+  }
+  else {
+    tavg = score / questions;
+    return tavg.toFixed(2);
+  }
+}
+
+
+module.exports.examp_init = function(userid){
+  if(!db.db.hasOwnProperty('examp')){
+    db.db.examp = new Object();
+  }
+  if(!db.db.examp.hasOwnProperty(userid)){
+    db.db.examp[userid] = new Object();
+  }
+  if(!db.db.examp[userid].hasOwnProperty('average_limit')){
+    db.db.examp[userid].average_limit = 2.5;
+  }
+
+  db.db.save = true;
+
+  return db.db.examp[userid];
+}
+
+
 module.exports.setup = async function(client, guildId, user, mode) {
 
   const mirror = await client.channels.cache.get('1124570586518126633');
+
+  examp = this.examp_init(user.id);
 
   if (mode === 'verification') {
     guild = client.guilds.cache.get(guildId);
@@ -201,24 +231,19 @@ module.exports.setup = async function(client, guildId, user, mode) {
   exam.mode = mode;
   exam.start_time = new Date();
   exam.channel = userchannel.id;
-  exam.trapped = false;
   exam.qindex = 0;
   exam.score = 0;
+  exam.avg = 0;
   exam.penalties = 0;
   exam.positives = 0;
   exam.negatives = 0;
   exam.zeros = 0;
   exam.questions = 0;
-  exam.question_limit = Math.min(40, this.ga_questions.length);
+  exam.question_limit = Math.min(50, this.ga_questions.length);
   exam.score_limit = 150;
 
-  // if (user.username === 'marq_andrew') {
-  //   exam.question_limit = 3;
-  //   exam.score_limit = 15;
-  // }
-
   if (automod.banned(displayName)) {
-    exam.trapped = true;
+    examp.average_limit = 5.0;
     userchannel.send("`Banned character in your name`");
   }
 
@@ -240,7 +265,7 @@ module.exports.setup = async function(client, guildId, user, mode) {
 
       if (typeof examdb !== 'undefined' && examdb !== null) {
 
-        if ((mode === 'dm' && examdb.questions < examdb.question_limit) || (mode === 'verification' && examdb.score < examdb.score_limit)) {
+        if ((mode === 'dm' && examdb.questions < examdb.question_limit) || (mode === 'verification' && (examdb.score < examdb.score_limit || examdb.avg < examp.average_limit))){
 
           if (mode === 'verification') {
             exam.score = examdb.score - 10;
@@ -251,10 +276,12 @@ module.exports.setup = async function(client, guildId, user, mode) {
             exam.penalties = examdb.penalties;
           }
 
+          //exam.avg = this.avg(exam.penalties, exam.positives, exam.negatives, exam.zeros, exam.score);
+
           exam.positives = examdb.positives;
           exam.zeros = examdb.zeros;
           exam.negatives = examdb.negatives;
-          exam.trapped = examdb.trapped;
+          exam.avg = examdb.avg;
 
           if (examdb.spectra) {
             exam.spectra = examdb.spectra;
@@ -262,14 +289,13 @@ module.exports.setup = async function(client, guildId, user, mode) {
 
           exam.questions = 0;
 
-          userchannel.send(`\`\`\`Reset (-10:${exam.score})\`\`\``).catch(err => console.log(err));
+          userchannel.send(`\`\`\`Reset (-10:${exam.score} avg: ${exam.avg})\`\`\``).catch(err => console.log(err));
 
           if (mode === 'verification') {
-            mirror.send(`\`\`\`${user.username} reset the exam (-10:${exam.score}}\`\`\``).catch(err => console.log(err));
+            mirror.send(`\`\`\`${user.username} reset the exam (-10:${exam.score} avg: ${exam.avg}}\`\`\``).catch(err => console.log(err));
           }
         }
         else {
-          exam.trapped = examdb.trapped;
         }
       }
       else {
@@ -294,6 +320,8 @@ module.exports.ask = async function(client, user, mode, examdb) {
 
   const mirror = await client.channels.cache.get('1124570586518126633');
 
+  examp = this.examp_init(user.id);
+
   if (mode === 'verification') {
     channel = client.channels.cache.get(examdb.channel);
   }
@@ -303,7 +331,9 @@ module.exports.ask = async function(client, user, mode, examdb) {
 
   if (examdb.qindex === 0) {
     if (mode === 'verification') {
-      channel.send(`\`\`\`Beginning questioning of ${user.username}.\n\n* You need ${examdb.score_limit} points to pass. Questioning will continue until your score exceeds ${examdb.score_limit}, 24 hours elapses or you leave the server.\n* Correct answers give a maximum of 5 points.\n* Incorrect or invalid answers subtract from your score. Other penalties may apply.\n* Questions are submitted, debated and approved by verified server members. As an unverified member, you accept their verdict without question.\`\`\``).catch(err => console.log(err));
+      //channel.send(`\`\`\`Beginning questioning of ${user.username}.\n\n* You need ${examdb.score_limit} points to pass. Questioning will continue until you pass, 24 hours elapses or you leave the server.\n* Correct answers give a maximum of 5 points.\n* Incorrect or invalid answers subtract from your score. Other penalties may apply.\n* Questions are submitted, debated and approved by verified server members. As an unverified member, you accept their verdict without question.\`\`\``).catch(err => console.log(err));
+      channel.send(`\`\`\`Beginning questioning of ${user.username}.\n\n* You need ${examdb.score_limit} points with an average of ${examp.average_limit} to pass. Questioning will continue until you pass, 24 hours elapses or you leave the server.\n* Correct answers give a maximum of 5 points.\n* Incorrect or invalid answers subtract from your score. Other penalties may apply.\n* Questions are submitted, debated and approved by verified server members. As an unverified member, you accept their verdict without question.\`\`\``).catch(err => console.log(err));
+
 
       const embed = new MessageEmbed()
         .setColor(0x00ffff)
@@ -350,6 +380,8 @@ module.exports.answer = function(client, message, mode) {
 
       const mirror = client.channels.cache.get('1124570586518126633');
 
+      examp = this.examp_init(message.author.id);
+
       if (typeof examdb !== 'undefined' && examdb !== null) {
 
         const answer = message.content.trim()[0].toUpperCase();
@@ -368,9 +400,10 @@ module.exports.answer = function(client, message, mode) {
           let score = -10;
           examdb.score = examdb.score + score;
           examdb.penalties = examdb.penalties + 1;
-          message.channel.send(`\`\`\`Invalid answer (${score}:${examdb.score}). You must answer with just a, b, c, d etc. without brackets.\`\`\``).catch(err => console.log(err));
+          examdb.avg = this.avg(examdb.penalties, examdb.positives, examdb.negatives, examdb.zeros, examdb.score);
+          message.channel.send(`\`\`\`Invalid answer (${score}:${examdb.score} avg: ${examdb.avg}). You must answer with just a, b, c, d etc. without brackets.\`\`\``).catch(err => console.log(err));
 
-          mirror.send(`\`\`\`${message.author.username} gave an invalid answer (${score}:${examdb.score})\`\`\``).catch(err => console.log(err));
+          mirror.send(`\`\`\`${message.author.username} gave an invalid answer (${score}:${examdb.score} avg: ${examdb.avg})\`\`\``).catch(err => console.log(err));
 
           const test = automod.gtest(message);
 
@@ -378,10 +411,13 @@ module.exports.answer = function(client, message, mode) {
             let score = -100;
             examdb.score = examdb.score + score;
             examdb.penalties = examdb.penalties + 1;
-            examdb.trapped = true;
-            message.channel.send(`\`\`\`Answer included ${test.type} (${score}:${examdb.score})\`\`\``).catch(err => console.log(err));
+            examp.average_limit = 5.1;
 
-            mirror.send(`\`\`\`${message.author.username}'s answer included ${test.type} (${score}:${examdb.score}). They are now trapped in the exam.\`\`\``).catch(err => console.log(err));
+            examdb.avg = this.avg(examdb.penalties, examdb.positives, examdb.negatives, examdb.zeros, examdb.score);
+
+            message.channel.send(`\`\`\`Answer included ${test.type} (${score}:${examdb.score} avg: ${examdb.avg})\`\`\``).catch(err => console.log(err));
+
+            mirror.send(`\`\`\`${message.author.username}'s answer included ${test.type} (${score}:${examdb.score} avg: ${examdb.avg}). They are now trapped in the exam.\`\`\``).catch(err => console.log(err));
 
             message.delete();
           }
@@ -408,8 +444,10 @@ module.exports.answer = function(client, message, mode) {
           }
 
           if (response.entrap) {
-            examdb.trapped = true;
+            examp.average_limit = 5.1;
           }
+
+          examdb.avg = this.avg(examdb.penalties, examdb.positives, examdb.negatives, examdb.zeros, examdb.score);
 
           if (score !== 0) {
             if (this.ga_questions[index].spectra) {
@@ -450,11 +488,12 @@ module.exports.answer = function(client, message, mode) {
           }
 
           if (mode === 'dm') {
-            message.reply(`\`\`\`LGBTQIA+ Antifa opinion : ${response.reply}, score = ${score}:${examdb.score}\`\`\``).catch(err => console.log(err));
+            message.reply(`\`\`\`LGBTQIA+ Antifa opinion : ${response.reply}, score = ${score}:${examdb.score} avg: ${examdb.avg}\`\`\``).catch(err => console.log(err));
           }
           else {
             if (message.channel) {
-              message.reply(`\`\`\`${response.reply} (${score}:${examdb.score})\`\`\``).catch(err => console.log(err));
+          
+              message.reply(`\`\`\`${response.reply} (${score}:${examdb.score} avg: ${examdb.avg})\`\`\``).catch(err => console.log(err));
 
               mirror.send(`\`\`\`${message.author.username} answered (${examdb.qarray[qindex].amap[amapi].key}): ${response.answer}\nResponse is ${response.reply} (${response.score}:${examdb.score}).\`\`\``).catch(err => console.log(err));
             }
@@ -479,7 +518,8 @@ module.exports.answer = function(client, message, mode) {
           }
         }
         else {
-          if (examdb.score >= examdb.score_limit && !examdb.trapped) {
+
+          if (examdb.score >= examdb.score_limit && examdb.avg >= examp.average_limit) {
             terminate = true;
           }
         }

@@ -133,6 +133,7 @@ function rowtime() {
   }
 
   var h1 = document.getElementsByTagName('h1')[0];
+  console.log(h1);
   var ts = h1.getElementsByTagName('div')[1];
   ts.style.textAlign = 'left';
   ts.style.fontSize = 'small'

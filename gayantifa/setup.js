@@ -43,8 +43,10 @@ module.exports.setup = function(client, channel) {
   else if (channel.id === '1086895233037516800') {
     channel.bulkDelete(100).catch(err => { console.log(err) });
 
-    channel.send("```Welcome to the LGBTQIA+ Antifa (Anti-fascist) International Collective. The activities of this group are secret but are in full compliance with the Discord TOS.\n\n⚠️ This server is trans 🏳️‍⚧️inclusive. 2S people are also warmly welcomed. Fascists, NAZIs, MAGAs, racists, homophobes, transphobes, TERFs or any other category of arsehole need not apply (i.e. fuck off!)\n\nIn order to gain admission, you must pass an examination consisting of a number of multiple choice questions that will be asked in a private channel named 'exam-[your member id number]'. To create your private channel and begin your interrogation, react to this message with ✅```")
+    channel.send("```Welcome to the LGBTQIA+ Antifa (Anti-fascist) International Collective. The activities of this group are secret but are in full compliance with the Discord TOS.\n\n⚠️ This server is trans 🏳️‍⚧️inclusive. 2Spirited people are also warmly welcomed. Fascists, NAZIs, MAGAs, racists, homophobes, transphobes, religious bigots, TERFs or any other category of arsehole need not apply (i.e. fuck off!)\n\nIn order to gain full admission, you must pass an examination consisting of a number of multiple choice questions that will be asked in a private channel named 'exam-[your member id number]'. To create your private channel and begin your interrogation, react to this message with ✅```")
       .then(function(message) { message.react('✅') })
+      .catch(err => { console.log(err) });
+    channel.send(`If the <@1087250515932483664> bot is offline, you can't do the test. Wait for it to come back online or ping <@679465390841135126>.`)
       .catch(err => { console.log(err) });
   }
   else if (channel.id === '1089313388187885690') {

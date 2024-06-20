@@ -54,6 +54,16 @@ module.exports.setup = function() {
 
 module.exports.message = function(client, jalendu, message) {
 
+  if (message.author.bot) {
+    return;
+  }
+
+  message.reply(`You are a newcomer to Gay+ Men Meditating. That means that you don't have full access to the server until ` +
+        `you are verified. Please go to <#851056727419256902> and follow the instructions there.`);
+
+  return;
+
+
   var msglc = message.content.trim().toLowerCase().replace(/<[@#!&](.*?)>/g, '');
 
   if (msglc == '' || message.author.bot) {

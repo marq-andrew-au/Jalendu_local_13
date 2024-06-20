@@ -2668,5 +2668,329 @@
     "author": "824590241922023445",
     "status": "active",
     "index": 88
+  },
+  {
+    "question": "What are among the aims of Drag Queen Story Time?",
+    "spectra": [
+      "conservative - progressive",
+      "homophobic - homofavorable",
+      "transphobic - transfavorable"
+    ],
+    "answers": [
+      {
+        "answer": "Comic entertainment for children and their parents.",
+        "reply": "Correct.",
+        "score": 5
+      },
+      {
+        "answer": "To encourage children to read.",
+        "reply": "Correct.",
+        "score": 5
+      },
+      {
+        "answer": "To eliminate the trauma children and teens are often forced to experience as they realise that they are lgbt+.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "To promote acceptance and tolerance.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "To provide positive queer role models.",
+        "reply": "Correct",
+        "score": 5
+      },
+      {
+        "answer": "To promote immoral lifestyle choices to children.",
+        "reply": "Wrong",
+        "score": -5
+      },
+      {
+        "answer": "To sexualise minors.",
+        "reply": "The question is about Drag Queen Story Time. Not Child beauty pageants.",
+        "score": -5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "1226043516430323742",
+    "status": "active",
+    "index": 89
+  },
+  {
+    "question": "A gay man's male partner decides to transition to female. What is your opinion?",
+    "spectra": [
+      "homophobic - homofavorable",
+      "transphobic - transfavorable"
+    ],
+    "answers": [
+      {
+        "answer": "The man must become heterosexual.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "They can't remain in a relationship.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "The woman must become heterosexual",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "They both must become heterosexual",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "Gender and sexuality are different things.",
+        "reply": "True.",
+        "score": 5
+      },
+      {
+        "answer": "Love conquers all.",
+        "reply": "True.",
+        "score": 5
+      },
+      {
+        "answer": "My opinion is irrelevant. I accept people as they are.",
+        "reply": "Me too.",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "1226043516430323742",
+    "status": "active",
+    "index": 90
+  },
+  {
+    "question": "Studies of male identical twins showed that about 50% of the pairs where one was gay were both gay. Given that only 1 - 6% of men are gay, this proves a huge genetic predisposition in male sexuality. Why would a gene or genes that reduce the effective fertility of men be selected for in evolution?",
+    "spectra": [
+      "post-truth - pro-truth"
+    ],
+    "answers": [
+      {
+        "answer": "I don't accept the results.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "It shows that the theory of evolution is false.",
+        "reply": "Unlikely but if so, god created upto 6% of men gay.",
+        "score": -5
+      },
+      {
+        "answer": "One man can quickly impregnate many women. Also in many species of mammal, including primates, only a small proportion of dominant males get to have sex with females. So a decrease in male effective fertility is evolutionarily irrelevant. ",
+        "reply": "Correct.",
+        "score": 5
+      },
+      {
+        "answer": "There is evidence that the genes that predispose a man to homosexuality when carried by a woman increase her fertility by delaying her menopause. Genes that cause a small increase in female fertility would easily offset a small decrease in male effective fertility.",
+        "reply": "Correct.",
+        "score": 5
+      },
+      {
+        "answer": "There may be some societal advantage when a small proportion of men are not engaged in activities related to procreation.",
+        "reply": "Correct.",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 91
+  },
+  {
+    "question": "The people in which country are not mainly Arabic speakers?",
+    "spectra": [
+      "post-truth - pro-truth"
+    ],
+    "answers": [
+      {
+        "answer": "Iran.",
+        "reply": "Correct.",
+        "score": 5
+      },
+      {
+        "answer": "The people of all of these countries are mainly Arabic speakers.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "Egypt.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "Lebanon.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "Libya.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "Morocco.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "Saudi Arabia.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "824590241922023445",
+    "status": "active",
+    "index": 92
+  },
+  {
+    "question": "Studies of male identical twins showed that about 50% of the pairs where one was gay were both gay. Given that only 1 - 6% of men are gay, this proves a huge genetic predisposition in male sexuality. Why would a gene or genes that reduce the effective fertility of men be selected for in evolution?",
+    "spectra": [
+      "post-truth - pro-truth"
+    ],
+    "answers": [
+      {
+        "answer": "I don't accept the results.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "It shows that the theory of evolution is false.",
+        "reply": "Unlikely but if so, god created upto 6% of men gay.",
+        "score": -5
+      },
+      {
+        "answer": "One man can quickly impregnate many women. Also in many species of mammal, including primates, only a small proportion of dominant males get to have sex with females. So a decrease in male effective fertility is evolutionarily irrelevant. ",
+        "reply": "Correct but only a partial explanation.",
+        "score": 5
+      },
+      {
+        "answer": "There is evidence that the genes that predispose a man to homosexuality when carried by a woman increase her fertility by delaying her menopause. Genes that cause a small increase in female fertility would easily offset a small decrease in male effective fertility.",
+        "reply": "Correct.",
+        "score": 5
+      },
+      {
+        "answer": "There may be some societal advantage when a small proportion of men are not engaged in activities related to procreation.",
+        "reply": "Correct.",
+        "score": 5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "1226043516430323742",
+    "status": "active",
+    "index": 93
+  },
+  {
+    "question": "Should animal species be saved from extinction even though it causes people to be thrown into poverty?",
+    "spectra": [
+      "right-leaning - left-leaning"
+    ],
+    "answers": [
+      {
+        "answer": "Yes.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "No. There is huge inequality and greed. It is possible to save animal species without throwing people into poverty.",
+        "reply": "Correct.",
+        "score": 5,
+        "spectra": [
+          "right-leaning - left-leaning"
+        ]
+      },
+      {
+        "answer": "No. The economy is more important than prevention of animal extinctions.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 94
+  },
+  {
+    "question": "Should consensual sex between two closely related same-sex people be called \"incest\"?",
+    "spectra": [
+      "conservative - progressive"
+    ],
+    "answers": [
+      {
+        "answer": "Since a same-sex couple can't have children with each other, the term \"incest\" is irrelevant",
+        "reply": "Correct.",
+        "score": 5
+      },
+      {
+        "answer": "Yes.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "679465390841135126",
+    "status": "active",
+    "index": 95
+  },
+  {
+    "question": "Should prostitution be illegal?",
+    "spectra": [
+      "conservative - progressive"
+    ],
+    "answers": [
+      {
+        "answer": "No.",
+        "reply": "Correct.",
+        "score": 5
+      },
+      {
+        "answer": "Yes.",
+        "reply": "Wrong.",
+        "score": -5
+      },
+      {
+        "answer": "I don't know.",
+        "reply": "Neutral",
+        "score": 0
+      }
+    ],
+    "author": "1226043516430323742",
+    "status": "active",
+    "index": 96
   }
 ]

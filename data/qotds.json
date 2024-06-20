@@ -1,7 +1,7 @@
 {
   "active": true,
   "channelid": "900243601303420988",
-  "lastasktime": "2024-05-18T12:34:20.762Z",
+  "lastasktime": "2024-06-15T16:14:22.436Z",
   "intervaldays": 7,
   "maxasked": 2,
   "nextid": 101,
@@ -819,47 +819,50 @@
     {
       "id": 52,
       "question": "test",
-      "asked": 0,
+      "asked": 2,
       "replies": 0,
       "addedby": "marq_andrew",
       "status": "approved",
       "reviewedby": "marq_andrew",
-      "askedtime": null,
-      "random": 0.6847321152609775
+      "askedtime": "2024-05-25T14:06:13.756Z",
+      "random": 0.6847321152609775,
+      "messageid": "1243928115827179556"
     },
     {
       "id": 83,
       "question": "Where do you find peace and replenishment when the world goes crazy?",
-      "asked": 0,
+      "asked": 2,
       "replies": 0,
       "addedby": "marq_andrew",
       "status": "approved",
       "reviewedby": "marq_andrew",
-      "askedtime": null,
-      "random": 0.6847725008267473
+      "askedtime": "2024-06-01T14:20:22.681Z",
+      "random": 0.6847725008267473,
+      "messageid": "1246468392085487696"
     },
     {
       "id": 74,
       "question": "It is said that mental illness is more common than the common cold. Why are so many people depressed or anxious?",
-      "asked": 0,
+      "asked": 2,
       "replies": 0,
       "addedby": "marq_andrew",
       "status": "approved",
       "reviewedby": "marq_andrew",
-      "askedtime": null,
-      "random": 0.6945952785601661
+      "askedtime": "2024-06-08T15:33:07.812Z",
+      "random": 0.6945952785601661,
+      "messageid": "1249023415528980554"
     },
     {
       "id": 32,
       "question": "What was your first contact with meditation? How old were you when you first meditated?",
-      "asked": 1,
+      "asked": 2,
       "replies": 0,
       "addedby": "marq_andrew",
       "status": "approved",
       "reviewedby": "marq_andrew",
-      "askedtime": "2022-07-07T04:42:44.177Z",
+      "askedtime": "2024-06-15T16:14:22.436Z",
       "random": 0.7168372905105602,
-      "messageid": "994463457262981180"
+      "messageid": "1251570509955465227"
     },
     {
       "id": 64,
