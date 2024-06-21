@@ -84,7 +84,13 @@ module.exports.demote_code = function(client) {
 
     examp = quiz.examp_init(member[1].id);
 
-    if(!member[1].roles.cache.has('1183348471898578996')){
+    if(member[1].roles.cache.has('1253324399390621707')){ //spade
+      examp.average_limit = 5.1;
+    }
+    else if(examp.average_limit === 5.1){
+      member[1].roles.add("1253324399390621707").catch(err => console.log(filename + err));    // spade
+    }
+    else if(!member[1].roles.cache.has('1183348471898578996')){
       examp.average_limit = 2.5;
     }
     else {
@@ -164,7 +170,7 @@ let repeats = 0;
 
 
 module.exports.messageCreate = async function(client, message) {
-  //antispam.spam(message);
+  antispam.spam(message,false);
 
   if (message.author.bot) {
     if (message.channel.type !== 'DM' && message.channel.name.startsWith('exam-')) {
@@ -366,35 +372,35 @@ module.exports.ga_commands = function(client, message, guildtype){
   else if (command[1] === 'm1') {
     message.guild.members.cache.forEach((member) => {
       if (member.roles.cache.has('1086897285461463050')){
-        member.roles.add('1183348471898578996');
+        member.roles.add('1183348471898578996').catch(err => console.log(filename + err));
       }
     });
   }
   else if (admin && command[1] === 'demote' && guildtype !== 'dm' && message.mentions.members) {
-    message.mentions.members.first().roles.add('1117046096569565255');
-    // examp = quiz.examp_init(message.mentions.members.first().id);
-    // if(!message.mentions.members.first().cache.has('1183348471898578996')){
-    //   examp.average_limit = 2.5;
-    // }
-    // else {
-    //   examp.average_limit = Math.max(5,examp.average_limit + 0.5);
-    // }
-    // db.db.save = true;
+    message.mentions.members.first().roles.add('1117046096569565255').catch(err => console.log(filename + err));
     message.delete().catch(err => console.log(filename + err));
   }
   else if (admin && command[1] === 'trap' && guildtype !== 'dm' && message.mentions.members) {
     examp = quiz.examp_init(message.mentions.members.first().id);
     examp.average_limit = 5.1;
+    message.mentions.members.first().roles.add('1253324399390621707').catch(err => console.log(filename + err));
     db.db.save = true;
     message.delete().catch(err => console.log(filename + err));
   }
   else if (admin && command[1] === 'untrap' && guildtype !== 'dm' && message.mentions.members){
     examp = quiz.examp_init(message.mentions.members.first().id);
     examp.average_limit = 2.5;
+    message.mentions.members.first().roles.remove('1253324399390621707').catch(err => console.log(filename + err));
+
     db.db.save = true;
     message.delete().catch(err => console.log(filename + err));
   }
+  else if (admin && command[1] === 'spamtest' && guildtype !== 'dm' && message.mentions.members){
+    antispam.spamtest(message);
+    message.delete().catch(err => console.log(filename + err));
+  }
   else {
+
     message.reply("Unknown bot command").catch(console.error);
   }
 }
