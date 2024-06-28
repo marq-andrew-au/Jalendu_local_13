@@ -170,7 +170,7 @@ let repeats = 0;
 
 
 module.exports.messageCreate = async function(client, message) {
-  antispam.spam(message,false);
+  antispam.spam(client,message,false);
 
   if (message.author.bot) {
     if (message.channel.type !== 'DM' && message.channel.name.startsWith('exam-')) {

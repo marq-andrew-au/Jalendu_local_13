@@ -1,0 +1,18 @@
+node:events:505
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: socket hang up
+    at connResetException (node:internal/errors:692:14)
+    at TLSSocket.socketOnEnd (node:_http_client:478:23)
+    at TLSSocket.emit (node:events:539:35)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21)
+Emitted 'error' event on ClientRequest instance at:
+    at TLSSocket.socketOnEnd (node:_http_client:478:9)
+    at TLSSocket.emit (node:events:539:35)
+    at endReadableNT (node:internal/streams/readable:1345:12)
+    at processTicksAndRejections (node:internal/process/task_queues:83:21) {
+  code: 'ECONNRESET'
+}
+Marks-MacBook-Pro:Jalendu_local_13_v1 marqw$ 
